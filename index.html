@@ -7,30 +7,68 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div>
-                <img src="img/logo.png" alt="Logo TecnoStore" class="logo">
-                <h1>TecnoStore</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="categoria1.html">Periféricos</a></li>
-                <li><a href="categoria2.html">Componentes</a></li>
-                <li><a href="categoria3.html">Notebooks</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Registro</a></li>
-            </ul>
-        </nav>
-
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo TecnoStore" class="logo">
+            <h1>TecnoStore</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categoria1.html">Computación</a></li>
+            <li><a href="categoria2.html">Smartphones</a></li>
+            <li><a href="categoria3.html">Camaras de Seguridad</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Registro</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+        
+    <!-- BANNER PRINCIAPL-->
         <section class="banner">
             <div class="banner content">
                 <h2>Bienvenido a TecnoStore</h2>
-                <p>Descubrí nuestros productos tecnológicos al mejor precio.</p>
                 <p>Los mejores productos tecnológicos a tu alcance.</p>
                 <a href="categoria1.html" class="btn-banner">Ver productos</a>
             </div>
         </section>
-    </header>
+    <!-- CATEGORIAS -->
+    <section class="categorias">
+        <h2 style="text-align:center; margin:50px 0 30px;">Nuestras Categorías</h2>
+
+        <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px; padding-bottom:50px;">
+
+        <!-- Categoria 1 -->
+        <div style="background-color:white; border-radius:10px; width:280px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:center; padding:20px;">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Laptops" style="width:100%; border-radius:10px;">
+            <h3>Laptops</h3>
+            <p>Potencia y rendimiento para tus tareas diarias.</p>
+            <a href="categoria1.html" class="btn-banner">Ver más</a>
+        </div>
+
+        <!-- Categoria 2 -->
+        <div style="background-color:white; border-radius:10px; width:280px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:center; padding:20px;">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Smartphones" style="width:100%; border-radius:10px;">
+            <h3>Smartphones</h3>
+            <p>Los últimos modelos al alcance de tu mano.</p>
+            <a href="categoria2.html" class="btn-banner">Ver más</a>
+        </div>
+
+        <!-- Categoria 3 -->
+        <div style="background-color:white; border-radius:10px; width:280px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:center; padding:20px;">
+            <img src="https://images.unsplash.com/photo-1585386959984-a41552231693" alt="Accesorios" style="width:100%; border-radius:10px;">
+            <h3>Accesorios</h3>
+            <p>Todo lo que necesitás para complementar tu equipo.</p>
+            <a href="categoria3.html" class="btn-banner">Ver más</a>
+        </div>
+
+        </div>
+  </section>
+
+  <!-- FOOTER SIMPLE -->
+  <footer style="background-color:#0f172a; color:white; text-align:center; padding:15px;">
+    <p>© 2025 TecnoStore — Todos los derechos reservados</p>
+  </footer>
+
 </body>
 </html>
