@@ -4,8 +4,7 @@
 
 **Materia:** Aplicaciones Web I
 
-**Repositorio:** ecommerce-app
-
+**Repositorio:** https://github.com/Ksquiitoox/ecommerce-app.git
 
 **Descripción:** Proyecto E-commerce Tienda de accesorios de PC. 
         Incluye:
