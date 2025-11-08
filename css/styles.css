@@ -50,7 +50,7 @@ body {
 .nav-links a:hover {
   color: #38bdf8;
 }
-@KEYFRAMES slideDown {
+@keyframes slideDown {
   from {
     opacity: 0;
     transform: translateY(-50px);
