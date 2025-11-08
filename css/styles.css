@@ -50,6 +50,10 @@ body {
 .nav-links a:hover {
   color: #38bdf8;
 }
+.nav-links a.active {
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+}
 @keyframes slideDown {
   from {
     opacity: 0;
