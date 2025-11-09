@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TecnoStore | Inicio</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoStore - Tu Tienda de Tecnología</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo TecnoStore">
+            <h1>TecnoStore</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="Categorias.html">Categorías</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Registro</a></li>
+            <li><a href="#">Logout</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+            <script>document.getElementById('logoutBtn').addEventListener('click', function() {window.location.href = "login.html";
+                
+            });
+</script>
+        </ul>
+    </nav>
+        
+    <!-- BANNER PRINCIAPL-->
+        <section class="banner">
+            <div class="banner-content">
+                <h2>Bienvenido a TecnoStore</h2>
+                <p>Los mejores productos tecnológicos a tu alcance.</p>
+                <a href="Categorias.html" class="btn-banner">Ver productos</a>
+            </div>
+        </section>
 
-  <!-- Navbar -->
-  <div id="navbar"></div>
+  <!-- FOOTER SIMPLE -->
+  <footer style="background-color:#0f172a; color:white; text-align:center; padding:15px;">
+    <p>© 2025 TecnoStore — Todos los derechos reservados</p>
+  </footer>
 
-  <main>
-    <h1>Bienvenido a TecnoStore 💻</h1>
-    <div id="cards-container" class="cards-container"></div>
-  </main>
-
-  <script src="js/navbar.js"></script>
-  <script src="js/products.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>
