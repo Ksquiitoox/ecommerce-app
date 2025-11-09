@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       // Simula un login correcto
-      window.location.href = "index.html";
+      window.location.href = "login.html";
     });
   }
 });
