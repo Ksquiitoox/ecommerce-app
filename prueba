@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoStore - Tu Tienda de Tecnología</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo TecnoStore">
+            <h1>TecnoStore</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="Categorias.html">Categorías</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Registro</a></li>
+            <li><a href="#">Logout</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+            <script>document.getElementById('logoutBtn').addEventListener('click', function() {window.location.href = "login.html";
+                
+            });
+</script>
+        </ul>
+    </nav>
+        
+    <!-- BANNER PRINCIAPL-->
+        <section class="banner">
+            <div class="banner-content">
+                <h2>Bienvenido a TecnoStore</h2>
+                <p>Los mejores productos tecnológicos a tu alcance.</p>
+                <a href="Categorias.html" class="btn-banner">Ver productos</a>
+            </div>
+        </section>
+
+  <!-- FOOTER SIMPLE -->
+  <footer style="background-color:#0f172a; color:white; text-align:center; padding:15px;">
+    <p>© 2025 TecnoStore — Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - TecnoStore</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo TecnoStore">
+            <h1>TecnoStore</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Categorias.html">Categorías</a></li>
+            <li><a href="Laptops.html">Computación</a></li>
+            <li><a href="Smartphones.html">Smartphones</a></li>
+            <li><a href="Accesorios.html">Accesorios</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+            <li><a href="register.html">Registro</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+    <!-- CONTENIDO PRINCIPAL-->
+    <main class="form-container"> 
+        <h2>Iniciar Sesión</h2>
+        <form action="#" method="post" class="form-box" id="loginForm">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Ingresar</button>
+
+            <p class="alt-link">¿No tenés cuenta? <a href="register.html">Registrate aquí</a></p>
+        </form>
+        <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            // Acá podrías validar usuario/contraseña si quisieras
+            // window.location.href = "index.html"; // redirección al home
+});
+</script>
+    </main>
+     <!-- FOOTER SIMPLE -->
+  <footer style="background-color:#0f172a; color:white; text-align:center; padding:15px;">
+    <p>© 2025 TecnoStore — Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
