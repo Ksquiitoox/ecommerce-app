@@ -1,37 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const navbarContainer = document.getElementById('navbar');
+// Estructura de páginas (array de objetos)
+const paginas = [
+  { titulo: "Inicio", url: "index.html" },
+  { titulo: "Productos", url: "index.html#productos" },
+  { titulo: "Contacto", url: "#" }
+];
 
-  if (navbarContainer) {
-    let navHTML = `
-      <nav class="navbar">
-        <div class="logo">
-          <img src="img/logo.png" alt="Logo TecnoStore">
-          <h1>TecnoStore</h1>
-        </div>
-        <ul class="nav-links">
-    `;
+// Componente de Navbar
+function generarNavbar() {
+  const nav = document.getElementById('navbar');
+  const usuario = localStorage.getItem('usuario') || 'Invitado';
 
-    pages.forEach(page => {
-      if (page.title === "Logout") {
-        navHTML += `<li><a href="#" id="logoutBtn">${page.title}</a></li>`;
-      } else {
-        navHTML += `<li><a href="${page.url}">${page.title}</a></li>`;
-      }
-    });
+  nav.innerHTML = `
+    <nav class="navbar">
+      <h2 class="logo">TecnoStore</h2>
+      <ul class="nav-links">
+        ${paginas.map(p => `<li><a href="${p.url}">${p.titulo}</a></li>`).join('')}
+        <li><button id="logoutBtn">Cerrar sesión</button></li>
+      </ul>
+      <span class="usuario">👤 ${usuario}</span>
+    </nav>
+  `;
 
-    navHTML += `
-        </ul>
-      </nav>
-    `;
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    localStorage.removeItem('usuario');
+    window.location.href = 'login.html';
+  });
+}
 
-    navbarContainer.innerHTML = navHTML;
-
-    // Logout redirección
-    const logout = document.getElementById('logoutBtn');
-    if (logout) {
-      logout.addEventListener('click', () => {
-        window.location.href = "login.html";
-      });
-    }
-  }
-});
+document.addEventListener('DOMContentLoaded', generarNavbar);
