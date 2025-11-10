@@ -51,12 +51,13 @@ body {
 }
 .nav-links li {
   white-space: nowrap;
+  flex-shrink: 0; /* evita que los links se achiquen */
 }
 .nav-links a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 8px;
+  padding: 10px 12px; /* ajustado para que no se corte */
   transition: color 0.3s;
   display: block;
 }
@@ -202,5 +203,5 @@ button:hover { background-color: #0ea5e9; }
   .banner h2 { font-size: 1.8rem; }
   .banner p { font-size: 1rem; }
   .input-icon input { padding-left: 35px; }
-  .nav-links a { font-size: 0.9rem; padding: 8px; }
+  .nav-links a { font-size: 0.9rem; padding: 8px 6px; }
 }
