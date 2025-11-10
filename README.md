@@ -6,9 +6,10 @@
 
 **Repositorio:** https://github.com/Ksquiitoox/ecommerce-app.git
 
-**Descripción:** Proyecto E-commerce Tienda de accesorios de PC. 
-        Incluye:
-- Página de inicio (index.html)
-- Página de login (login.html)
-- Página de registro (register.html)
-- Página de categorias
+**Descripción:** Proyecto E-commerce Tienda de Productos de Tecnología.
+
+Incluye:
+        Página de Inicio (Index.html)
+        Página de Categorías (Categorias.html): 1-Laptops (Laptops.html); 2-Smartphones (Smartphones.html); 3-Accesorios (Accesorios.html).
+        Página de login (login.html)
+        Página de registro (register.html)
