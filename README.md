@@ -9,7 +9,10 @@
 **Descripción:** Proyecto E-commerce Tienda de Productos de Tecnología.
 
 Incluye:
-        Página de Inicio (Index.html)
-        Página de Categorías (Categorias.html): 1-Laptops (Laptops.html); 2-Smartphones (Smartphones.html); 3-Accesorios (Accesorios.html).
-        Página de login (login.html)
-        Página de registro (register.html)
+        Página de Inicio (index.html)
+        Página de Categorías (Categorias.html):
+        1 - Laptops (Laptops.html);
+        2 - Smartphones (Smartphones.html);
+        3 - Accesorios (Accesorios.html).
+        Página de Login (Login.html)
+        Página de Registro (Register.html)
