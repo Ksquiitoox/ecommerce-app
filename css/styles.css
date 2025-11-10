@@ -1,7 +1,7 @@
 /*GENERAL*/
 body {
   margin: 0;
-  padding-top: 80px; /* espacio para navbar fijo */
+  padding-top: 80px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f5f5;
 }
@@ -19,7 +19,7 @@ body {
   height: 80px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   animation: slideDown 1s ease-out forwards;
-  overflow-x: hidden; /* corregido para evitar scroll horizontal */
+  overflow-x: hidden;
 }
 .logo {
   display: flex;
@@ -121,7 +121,7 @@ body {
 /*FORMULARIO DEL LOGIN Y REGISTRO*/
 .form-container {
   max-width: 400px;
-  margin: 40px auto 100px; /* corregido margen superior para no tapar navbar */
+  margin: 40px auto 100px;
   padding: 30px;
   background-color: #ffffff;
   border-radius: 8px;
@@ -200,7 +200,7 @@ button:hover { background-color: #0ea5e9; }
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    height: auto; /* deja que crezca */
+    height: auto;
     padding: 10px;
   }
   .nav-links {
