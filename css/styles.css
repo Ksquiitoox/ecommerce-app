@@ -11,6 +11,7 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
+
 /*NAVBAR*/
 .navbar {
   display: flex;
@@ -47,7 +48,7 @@ body {
   gap: 10px;
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* mantiene todos los links en una fila */
 }
 .nav-links li {
   white-space: nowrap;
@@ -57,7 +58,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 12px; /* ajustado para que no se corte */
+  padding: 10px 15px; /* ajustado para que no se corte la palabra */
   transition: color 0.3s;
   display: block;
 }
@@ -75,6 +76,7 @@ body {
   from { opacity: 0; transform: translateY(-50px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 /*BANNER*/
 .banner {
   background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
@@ -127,6 +129,7 @@ body {
 .btn-banner:hover {
   background-color: #0ea5e9;
 }
+
 /*FORMULARIO DEL LOGIN Y REGISTRO*/
 .form-container {
   max-width: 400px;
@@ -146,6 +149,7 @@ body {
   flex-direction: column;
   gap: 15px;
 }
+
 /*ICONOS*/
 .input-icon {
   position: relative;
@@ -168,15 +172,18 @@ body {
   font-size: 1rem;
   transition: all 0.3s;
 }
+
 /*VALIDACION*/
 input:invalid { border-color: red; }
 input:valid { border-color: green; }
+
 /*ANIMACION*/
 input:focus {
   border-color: #38bdf8;
   box-shadow: 0 0 5px #38bdf8;
   outline: none;
 }
+
 /*BOTONES*/
 button {
   background-color: #38bdf8;
@@ -198,6 +205,7 @@ button:hover { background-color: #0ea5e9; }
   font-weight: bold;
 }
 .alt-link a:hover { text-decoration: underline; }
+
 /*RESPO*/
 @media (max-width: 768px) {
   .banner h2 { font-size: 1.8rem; }
