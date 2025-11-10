@@ -1,27 +1,27 @@
-// js/login.js
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
+  if (!form) return;
 
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-      const email = document.getElementById("email").value.trim();
-      const password = document.getElementById("password").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-      if (email === "" || password === "") {
-        alert("Por favor, completá todos los campos.");
-        return;
-      }
+    if (!email || !password) {
+      alert("Por favor, completá todos los campos.");
+      return;
+    }
 
-      // Simulación de login correcto
-      if (email && password) {
-        localStorage.setItem("usuario", email); // o el nombre, según tu lógica
-        alert("Inicio de sesión exitoso. Bienvenido a TecnoStore!");
-        window.location.href = "index.html"; // Redirección
-      } else {
-        alert("Credenciales incorrectas. Intente nuevamente.");
-      }
-    });
-  }
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    const usuario = usuarios.find(u => u.email === email && u.password === password);
+
+    if (usuario) {
+      localStorage.setItem("usuarioLogueado", JSON.stringify(usuario));
+      alert(`Inicio de sesión exitoso. ¡Bienvenido ${usuario.nombre}!`);
+      window.location.href = "index.html";
+    } else {
+      alert("Usuario o contraseña incorrectos. Por favor intentá nuevamente.");
+    }
+  });
 });

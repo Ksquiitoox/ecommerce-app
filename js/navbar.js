@@ -1,15 +1,12 @@
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const navbarContainer = document.getElementById("navbar");
   if (!navbarContainer) return;
 
-  const currentPage = window.location.pathname.split("/").pop();
-  const usuarioLogueado = localStorage.getItem("usuario"); // ejemplo simple
+  const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
 
-  // Crear el contenedor principal de la navbar
   const nav = document.createElement("nav");
   nav.classList.add("navbar");
 
-  // Logo de la tienda
   const logoDiv = document.createElement("div");
   logoDiv.classList.add("logo");
   logoDiv.innerHTML = `
@@ -18,39 +15,21 @@
   `;
   nav.appendChild(logoDiv);
 
-  // Crear lista de enlaces
   const ul = document.createElement("ul");
   ul.classList.add("nav-links");
 
   navbarItems.forEach(item => {
-    // Ocultar "Login" y "Registro" si el usuario está logueado
-    if (usuarioLogueado && (item.title === "Login" || item.title === "Registro")) {
-      const saludo = document.createElement("span");
-      saludo.textContent = `👋 Hola, ${usuarioLogueado.nombre}`;
-      saludo.style.marginLeft = "15px";
-      saludo.style.fontWeight = "bold";
-      saludo.style.color = "#38bdf8";
-      logoDiv.appendChild(saludo);
-      return;
-    }
+    if (usuarioLogueado && (item.title === "Login" || item.title === "Registro")) return;
+    if (!usuarioLogueado && item.title === "Logout") return;
 
-    // Ocultar "Logout" si NO está logueado
-    if (!usuarioLogueado && item.title === "Logout") {
-      return;
-    }
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.textContent = item.title;
     a.href = item.url;
-
-    // Si tiene ID (como Logout), lo asignamos
     if (item.id) a.id = item.id;
 
-    // Detectar página activa
     const currentPage = window.location.pathname.split("/").pop();
-    if (a.href.includes(currentPage)) {
-      a.classList.add("active");
-    }
+    if (a.href.includes(currentPage)) a.classList.add("active");
 
     li.appendChild(a);
     ul.appendChild(li);
@@ -58,5 +37,23 @@
 
   nav.appendChild(ul);
   navbarContainer.appendChild(nav);
-});
 
+  if (usuarioLogueado) {
+    const saludo = document.createElement("span");
+    saludo.textContent = `👋 Hola, ${usuarioLogueado.nombre}`;
+    saludo.style.marginLeft = "15px";
+    saludo.style.fontWeight = "bold";
+    saludo.style.color = "#38bdf8";
+    logoDiv.appendChild(saludo);
+  }
+
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.removeItem("usuarioLogueado");
+      alert("Cerraste sesión correctamente 👋");
+      window.location.href = "login.html";
+    });
+  }
+});

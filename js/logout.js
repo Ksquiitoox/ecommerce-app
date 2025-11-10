@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   logoutBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    localStorage.removeItem("usuario"); // borra sesión
+    localStorage.removeItem("usuario");
     alert("Cerraste sesión correctamente 👋");
     window.location.href = "login.html";
   });

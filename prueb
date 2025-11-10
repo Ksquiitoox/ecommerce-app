@@ -1,18 +1,27 @@
-document.getElementById("loginForm").addEventListener("submit", (e) => {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("loginForm");
+  if (!form) return;
 
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value.trim();
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  // Simulación de login correcto
-  if (email && password) {
-    const nombreUsuario = email.split("@")[0]; // ejemplo: juan@gmail.com → "juan"
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-    localStorage.setItem("usuario", JSON.stringify({ nombre: nombreUsuario, email }));
+    if (!email || !password) {
+      alert("Por favor, completá todos los campos.");
+      return;
+    }
 
-    alert(`Bienvenido ${nombreUsuario} 👋`);
-    window.location.href = "index.html";
-  } else {
-    alert("Por favor completá todos los campos.");
-  }
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    const usuario = usuarios.find(u => u.email === email && u.password === password);
+
+    if (usuario) {
+      localStorage.setItem("usuarioLogueado", JSON.stringify(usuario));
+      alert(`Inicio de sesión exitoso. ¡Bienvenido ${usuario.nombre}!`);
+      window.location.href = "index.html";
+    } else {
+      alert("Usuario o contraseña incorrectos. Por favor intentá nuevamente.");
+    }
+  });
 });
