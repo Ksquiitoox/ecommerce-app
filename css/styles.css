@@ -54,6 +54,12 @@ body {
   font-weight: bold;
   transition: color 0.3s;
 }
+.nav-links li {
+  white-space: nowrap;
+}
+.navbar::-webkit-scrollbar {
+  display: none;
+}
 .nav-links a:hover {
   color: #38bdf8;
 }
