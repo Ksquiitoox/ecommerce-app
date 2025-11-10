@@ -1,17 +1,19 @@
-/*GENERAL*/
+/* GENERAL */
 body {
   margin: 0;
   padding-top: 80px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f5f5;
 }
+
 .sub-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-/*NAVBAR*/
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -25,20 +27,24 @@ body {
   animation: slideDown 1s ease-out forwards;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .logo img {
   width: 50px;
   height: 50px;
 }
+
 .logo h1 {
   color: #ffffff;
   font-size: 1.5rem;
   margin: 0;
 }
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -46,19 +52,23 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .nav-links a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
+
 .nav-links a:hover {
   color: #38bdf8;
 }
+
 .nav-links a.active {
   color: #38bdf8;
   border-bottom: 2px solid #38bdf8;
 }
+
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -81,13 +91,13 @@ body {
   position: relative;
   overflow: hidden;
 }
-/*Contenido del banner*/
+
 .banner-content {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 1.2s ease-out forwards;
 }
-/*Estilo del texto del banner con sombra*/
+
 .banner-content h2,
 .banner-content p {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -97,34 +107,29 @@ body {
   padding: 10px 20px;
   border-radius: 10px;
 }
-/*Animacin del contenido del banner*/
+
 @keyframes fadeIn {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-/*Animacin del contenido del banner*/
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/*Logo dentro del banner*/
+
 .banner-logo {
   width: 120px;
   height: auto;
 }
-/*Texto y botn*/
+
 .banner h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
+
 .banner p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
+
 .btn-banner {
   background-color: #38bdf8;
   color: #0f172a;
@@ -134,6 +139,7 @@ body {
   font-weight: bold;
   transition: background-color 0.3s;
 }
+
 .btn-banner:hover {
   background-color: #0ea5e9;
 }
@@ -146,59 +152,84 @@ body {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  text-align: center; 
 }
+
 .form-container h2 {
   margin-bottom: 20px;
   color: #0f172a;
+  text-align: center;
 }
+
 .form-box {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
-label {
+
+/* Nuevo: cada campo en un contenedor */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
   text-align: left;
   color: #0f172a;
-  font-weight: bold;
 }
-input {
+
+.form-group input {
   padding: 10px;
+  font-size: 1rem;
   border: 1px solid #cbd5e1;
   border-radius: 5px;
-  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 button {
   background-color: #38bdf8;
   color: #0f172a;
   border: none;
-  padding: 10px;
+  padding: 12px;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 10px;
 }
+
 button:hover {
   background-color: #0ea5e9;
 }
+
 .alt-link {
   margin-top: 10px;
+  text-align: center;
 }
+
 .alt-link a {
   color: #38bdf8;
   text-decoration: none;
   font-weight: bold;
 }
+
 .alt-link a:hover {
   text-decoration: underline;
 }
 
-/* Responsivo */
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .banner h2 {
     font-size: 1.8rem;
   }
   .banner p {
     font-size: 1rem;
+  }
+  .form-container {
+    margin: 50px 20px;
+    padding: 20px;
   }
 }
