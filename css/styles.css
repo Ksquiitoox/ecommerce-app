@@ -17,14 +17,14 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #0f172a;
-  padding: 0 20px; /* menos padding lateral para que entren todos los links */
+  padding: 0 10px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   animation: slideDown 1s ease-out forwards;
-  overflow-x: auto; /* permite scroll horizontal si los links no entran */
+  overflow-x: auto;
 }
 .logo {
   display: flex;
@@ -43,12 +43,11 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 10px;
   margin: 0;
   padding: 0;
   flex-wrap: nowrap;
-  white-space: nowrap; /* evita que los links se corten */
-  flex-shrink: 0;
+  white-space: nowrap;
 }
 .nav-links li {
   flex-shrink: 0;
@@ -60,8 +59,9 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
+  padding: 10px 8px;
   transition: color 0.3s;
-  padding: 10px 5px;
+  display: inline-block;
 }
 .nav-links a:hover {
   color: #38bdf8;
