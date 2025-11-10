@@ -17,7 +17,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #0f172a;
-  padding: 0px 20px;
+  padding: 0px 10px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -43,12 +43,11 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 10;
   margin: 0;
   padding: 0;
   flex-wrap: nowrap;
   white-space: nowrap;
-  flex-shrink: 0;
 }
 .nav-links li {
   flex-shrink: 0;
@@ -61,7 +60,8 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
-  padding: 10px 5px;
+  padding: 10px 8px;
+  display: inline-block;
 }
 .nav-links a:hover {
   color: #38bdf8;
