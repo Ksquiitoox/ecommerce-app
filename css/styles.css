@@ -1,4 +1,7 @@
 /*GENERAL*/
+html, body {
+  overflow-x: hidden; /* evita que cualquier elemento se salga horizontalmente */
+}
 body {
   margin: 0;
   padding-top: 70px;
@@ -10,8 +13,9 @@ body {
   height: 180px;
   object-fit: cover;
   border-radius: 10px;
+  max-width: 100%;
+  display: block;
 }
-
 /*NAVBAR*/
 .navbar {
   display: flex;
@@ -48,7 +52,7 @@ body {
   gap: 10px;
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap; /* mantiene todos los links en una fila */
+  flex-wrap: nowrap;
 }
 .nav-links li {
   white-space: nowrap;
@@ -58,7 +62,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 15px; /* ajustado para que no se corte la palabra */
+  padding: 10px 12px;
   transition: color 0.3s;
   display: block;
 }
@@ -76,7 +80,6 @@ body {
   from { opacity: 0; transform: translateY(-50px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 /*BANNER*/
 .banner {
   background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
@@ -87,11 +90,14 @@ body {
   padding: 100px 20px;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 .banner-content {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 1.2s ease-out forwards;
+  max-width: 100%;
 }
 .banner-content h2,
 .banner-content p {
@@ -101,6 +107,9 @@ body {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 10px;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
 }
 @keyframes fadeIn {
   to { opacity: 1; transform: translateY(0);}
@@ -108,28 +117,8 @@ body {
 .banner-logo {
   width: 120px;
   height: auto;
+  max-width: 100%;
 }
-.banner h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-.banner p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.btn-banner {
-  background-color: #38bdf8;
-  color: #0f172a;
-  text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-.btn-banner:hover {
-  background-color: #0ea5e9;
-}
-
 /*FORMULARIO DEL LOGIN Y REGISTRO*/
 .form-container {
   max-width: 400px;
@@ -139,6 +128,8 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   text-align: center;
+  width: 90%;
+  box-sizing: border-box;
 }
 .form-container h2 {
   margin-bottom: 20px;
@@ -148,8 +139,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 /*ICONOS*/
 .input-icon {
   position: relative;
@@ -171,19 +163,17 @@ body {
   border-radius: 5px;
   font-size: 1rem;
   transition: all 0.3s;
+  box-sizing: border-box;
 }
-
 /*VALIDACION*/
 input:invalid { border-color: red; }
 input:valid { border-color: green; }
-
 /*ANIMACION*/
 input:focus {
   border-color: #38bdf8;
   box-shadow: 0 0 5px #38bdf8;
   outline: none;
 }
-
 /*BOTONES*/
 button {
   background-color: #38bdf8;
@@ -205,11 +195,11 @@ button:hover { background-color: #0ea5e9; }
   font-weight: bold;
 }
 .alt-link a:hover { text-decoration: underline; }
-
 /*RESPO*/
 @media (max-width: 768px) {
   .banner h2 { font-size: 1.8rem; }
   .banner p { font-size: 1rem; }
   .input-icon input { padding-left: 35px; }
   .nav-links a { font-size: 0.9rem; padding: 8px 6px; }
+  .form-container { width: 95%; margin: 80px auto; }
 }
