@@ -8,24 +8,10 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="img/logo.png" alt="Logo TecnoStore">
-      <h1>TecnoStore</h1>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="Categorias.html">Categorías</a></li>
-      <li><a href="Laptops.html" class="active">Laptops</a></li>
-      <li><a href="Smartphones.html">Smartphones</a></li>
-      <li><a href="Accesorios.html">Accesorios</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="register.html">Registro</a></li>
-      <li><a href="#" id="logoutBtn">Logout</a></li>
-    </ul>
-  </nav>
+  <!-- NAVBAR dinámico -->
+  <nav id="navbar"></nav>
 
+  <!-- BANNER -->
   <section class="banner" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');">
     <div class="banner-content">
       <h2>Laptops</h2>
@@ -33,6 +19,7 @@
     </div>
   </section>
 
+  <!-- SECCIÓN DE PRODUCTOS -->
   <section style="text-align:center; padding:50px 20px;">
     <h2>Nuestras Laptops</h2>
     <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px; margin-top:30px;">
@@ -58,9 +45,12 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer style="background-color:#0f172a; color:white; text-align:center; padding:15px;">
     <p>© 2025 TecnoStore — Todos los derechos reservados</p>
   </footer>
+
+  <!-- SCRIPTS -->
   <script src="js/navbarData.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/logout.js"></script>

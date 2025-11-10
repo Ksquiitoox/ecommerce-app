@@ -1,39 +1,25 @@
-// js/navbar.js
 document.addEventListener("DOMContentLoaded", () => {
-  // Crear el contenedor del navbar
-  const navbar = document.createElement("nav");
-  navbar.classList.add("navbar");
+  const navList = document.querySelector(".nav-links");
+  if (!navList) return;
 
-  // Crear logo
-  navbar.innerHTML = `
-    <div class="logo">
-      <img src="img/logo.png" alt="Logo TecnoStore">
-      <h1>TecnoStore</h1>
-    </div>
-  `;
+  // Detecta en qué página estamos
+  const currentPage = window.location.pathname.split("/").pop();
 
-  // Crear lista de enlaces
-  const ul = document.createElement("ul");
-  ul.classList.add("nav-links");
-
-  // Generar cada enlace a partir del array
+  // Crea los ítems del menú a partir del array del archivo navbarData.js
   navbarItems.forEach(item => {
     const li = document.createElement("li");
     const a = document.createElement("a");
 
     a.textContent = item.title;
     a.href = item.url;
-    if (item.id) a.id = item.id; // si tiene id (Logout)
-    if (window.location.pathname.includes(item.url)) {
-      a.classList.add("active"); // resalta la página actual
+    if (item.id) a.id = item.id;
+
+    // Marca activo el enlace correspondiente a la página actual
+    if (item.url === currentPage) {
+      a.classList.add("active");
     }
 
     li.appendChild(a);
-    ul.appendChild(li);
+    navList.appendChild(li);
   });
-
-  navbar.appendChild(ul);
-
-  // Insertar al inicio del body
-  document.body.insertBefore(navbar, document.body.firstChild);
 });

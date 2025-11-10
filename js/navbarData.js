@@ -1,4 +1,3 @@
-// js/navbarData.js
 const navbarItems = [
   { title: "Home", url: "index.html" },
   { title: "Categorías", url: "Categorias.html" },
@@ -7,5 +6,5 @@ const navbarItems = [
   { title: "Accesorios", url: "Accesorios.html" },
   { title: "Login", url: "login.html" },
   { title: "Registro", url: "register.html" },
-  { title: "Logout", url: "#", id: "logoutBtn" } // el logout tiene un id especial
+  { title: "Logout", url: "#", id: "logoutBtn" }
 ];
