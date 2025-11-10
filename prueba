@@ -1,11 +1,16 @@
-/*GENERAL*/
+/*------------------------------------
+GENERAL
+------------------------------------*/
 body {
   margin: 0;
-  padding-top: 80px;
+  padding-top: 80px; /* espacio para el navbar */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f5f5;
 }
-/*NAVBAR*/
+
+/*------------------------------------
+NAVBAR
+------------------------------------*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -15,12 +20,13 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 80px; /* altura fija */
   z-index: 100;
-  height: 80px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  animation: slideDown 1s ease-out forwards;
-  overflow-x: auto;
+  animation: slideDown 0.8s ease-out forwards;
+  overflow-x: hidden; /* evita scroll horizontal */
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -35,90 +41,48 @@ body {
   font-size: 1.5rem;
   margin: 0;
 }
+
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 10px;
+  gap: 15px;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* permite que bajen en móviles */
 }
+
 .nav-links li {
-  flex: 0 1 auto;
+  flex: 0 1 auto; /* ajusta automáticamente sin romper layout */
 }
+
 .nav-links a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 8px;
-  transition: color 0.3s;
   display: block;
+  transition: color 0.3s;
 }
 .nav-links a:hover,
 .nav-links a.active {
   color: #38bdf8;
   border-bottom: 2px solid #38bdf8;
 }
+
+/* Scrollbar oculto */
 .navbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Animación navbar */
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-50px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/*BANNER*/
-.banner {
-  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  text-align: center;
-  padding: 100px 20px;
-  position: relative;
-  overflow: hidden;
-}
-.banner-content {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1.2s ease-out forwards;
-}
-.banner-content h2,
-.banner-content p {
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-  backdrop-filter: blur(2px);
-  background-color: rgba(0,0,0,0.25);
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-@keyframes fadeIn {
-  to { opacity: 1; transform: translateY(0);}
-}
-.banner-logo {
-  width: 120px;
-  height: auto;
-}
-.banner h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-.banner p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.btn-banner {
-  background-color: #38bdf8;
-  color: #0f172a;
-  text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-.btn-banner:hover {
-  background-color: #0ea5e9;
-}
-/*FORMULARIO DEL LOGIN Y REGISTRO*/
+
+/*------------------------------------
+FORMULARIO LOGIN / REGISTRO
+------------------------------------*/
 .form-container {
   max-width: 400px;
   margin: 100px auto;
@@ -128,16 +92,19 @@ body {
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   text-align: center;
 }
+
 .form-container h2 {
   margin-bottom: 20px;
   color: #0f172a;
 }
+
 .form-box {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-/*ICONOS*/
+
+/* ICONOS EN INPUTS */
 .input-icon {
   position: relative;
   width: 100%;
@@ -159,16 +126,19 @@ body {
   font-size: 1rem;
   transition: all 0.3s;
 }
-/*VALIDACION*/
+
+/* VALIDACION */
 input:invalid { border-color: red; }
 input:valid { border-color: green; }
-/*ENFOQUE*/
+
+/* ENFOQUE */
 input:focus {
   border-color: #38bdf8;
   box-shadow: 0 0 5px #38bdf8;
   outline: none;
 }
-/*BOTONES*/
+
+/* BOTONES */
 button {
   background-color: #38bdf8;
   color: #0f172a;
@@ -180,6 +150,8 @@ button {
   transition: background-color 0.3s;
 }
 button:hover { background-color: #0ea5e9; }
+
+/* LINK ALTERNATIVO */
 .alt-link {
   margin-top: 10px;
 }
@@ -189,10 +161,30 @@ button:hover { background-color: #0ea5e9; }
   font-weight: bold;
 }
 .alt-link a:hover { text-decoration: underline; }
-/*RESPO*/
+
+/*------------------------------------
+RESPONSIVO
+------------------------------------*/
 @media (max-width: 768px) {
   .banner h2 { font-size: 1.8rem; }
   .banner p { font-size: 1rem; }
   .input-icon input { padding-left: 35px; }
   .nav-links a { font-size: 0.9rem; padding: 8px; }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto; /* deja que crezca */
+    padding: 10px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+  .nav-links a {
+    width: 100%;
+  }
 }
