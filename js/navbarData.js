@@ -1,5 +1,5 @@
 const navbarItems = [
-  { title: "Home", url: "Index.html" },
+  { title: "Home", url: "index.html" },
   { title: "Categorías", url: "Categorias.html" },
   { title: "Laptops", url: "Laptops.html" },
   { title: "Smartphones", url: "Smartphones.html" },
