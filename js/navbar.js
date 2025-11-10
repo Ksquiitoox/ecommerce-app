@@ -1,25 +1,44 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const navList = document.querySelector(".nav-links");
-  if (!navList) return;
+  document.addEventListener("DOMContentLoaded", () => {
+  const navbarContainer = document.getElementById("navbar");
+  if (!navbarContainer) return;
 
-  // Detecta en qué página estamos
-  const currentPage = window.location.pathname.split("/").pop();
+  // Crear el contenedor principal de la navbar
+  const nav = document.createElement("nav");
+  nav.classList.add("navbar");
 
-  // Crea los ítems del menú a partir del array del archivo navbarData.js
+  // Logo de la tienda
+  const logoDiv = document.createElement("div");
+  logoDiv.classList.add("logo");
+  logoDiv.innerHTML = `
+    <img src="img/logo.png" alt="Logo TecnoStore">
+    <h1>TecnoStore</h1>
+  `;
+  nav.appendChild(logoDiv);
+
+  // Crear lista de enlaces
+  const ul = document.createElement("ul");
+  ul.classList.add("nav-links");
+
   navbarItems.forEach(item => {
     const li = document.createElement("li");
     const a = document.createElement("a");
-
     a.textContent = item.title;
     a.href = item.url;
+
+    // Si tiene ID (como Logout), lo asignamos
     if (item.id) a.id = item.id;
 
-    // Marca activo el enlace correspondiente a la página actual
-    if (item.url === currentPage) {
+    // Detectar página activa
+    const currentPage = window.location.pathname.split("/").pop();
+    if (a.href.includes(currentPage)) {
       a.classList.add("active");
     }
 
     li.appendChild(a);
-    navList.appendChild(li);
+    ul.appendChild(li);
   });
+
+  nav.appendChild(ul);
+  navbarContainer.appendChild(nav);
 });
+
