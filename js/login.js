@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Simulación de login correcto
-      if (email === "admin@tecnostore.com" && password === "1234") {
+      if (email && password) {
+        localStorage.setItem("usuario", email); // o el nombre, según tu lógica
         alert("Inicio de sesión exitoso. Bienvenido a TecnoStore!");
         window.location.href = "index.html"; // Redirección
       } else {

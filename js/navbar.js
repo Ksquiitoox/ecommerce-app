@@ -2,6 +2,9 @@
   const navbarContainer = document.getElementById("navbar");
   if (!navbarContainer) return;
 
+  const currentPage = window.location.pathname.split("/").pop();
+  const usuarioLogueado = localStorage.getItem("usuario"); // ejemplo simple
+
   // Crear el contenedor principal de la navbar
   const nav = document.createElement("nav");
   nav.classList.add("navbar");
@@ -20,6 +23,21 @@
   ul.classList.add("nav-links");
 
   navbarItems.forEach(item => {
+    // Ocultar "Login" y "Registro" si el usuario está logueado
+    if (usuarioLogueado && (item.title === "Login" || item.title === "Registro")) {
+      const saludo = document.createElement("span");
+      saludo.textContent = `👋 Hola, ${usuarioLogueado.nombre}`;
+      saludo.style.marginLeft = "15px";
+      saludo.style.fontWeight = "bold";
+      saludo.style.color = "#38bdf8";
+      logoDiv.appendChild(saludo);
+      return;
+    }
+
+    // Ocultar "Logout" si NO está logueado
+    if (!usuarioLogueado && item.title === "Logout") {
+      return;
+    }
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.textContent = item.title;

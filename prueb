@@ -1,0 +1,18 @@
+document.getElementById("loginForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  // Simulación de login correcto
+  if (email && password) {
+    const nombreUsuario = email.split("@")[0]; // ejemplo: juan@gmail.com → "juan"
+
+    localStorage.setItem("usuario", JSON.stringify({ nombre: nombreUsuario, email }));
+
+    alert(`Bienvenido ${nombreUsuario} 👋`);
+    window.location.href = "index.html";
+  } else {
+    alert("Por favor completá todos los campos.");
+  }
+});
