@@ -17,7 +17,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #0f172a;
-  padding: 0px 10px;
+  padding: auto;
   position: fixed;
   top: 0;
   width: 100%;
@@ -60,7 +60,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
-  padding: 10px 8px;
+  padding: auto;
   display: inline-block;
 }
 .nav-links a:hover {
