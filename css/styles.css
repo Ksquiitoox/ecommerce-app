@@ -17,14 +17,14 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #0f172a;
-  padding: auto;
+  padding: 0 20px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   animation: slideDown 1s ease-out forwards;
-  overflow-x: auto;
+  flex-wrap: wrap; /* permite que los links bajen de línea si no entran */
 }
 .logo {
   display: flex;
@@ -41,27 +41,25 @@ body {
   margin: 0;
 }
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 10;
+  list-style: none;
+  gap: 10px;
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap;
-  white-space: nowrap;
+  flex-wrap: wrap; /* los links bajan de línea si es necesario */
 }
 .nav-links li {
-  flex-shrink: 0;
-}
-.nav-links::-webkit-scrollbar {
-  display: none;
+  flex: 1 1 auto; /* se ajusta automáticamente */
+  min-width: 70px; /* asegura que no se corte la palabra */
 }
 .nav-links a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
+  padding: 10px 8px;
   transition: color 0.3s;
-  padding: auto;
-  display: inline-block;
+  display: block; /* ocupa todo el li */
+  text-align: center;
 }
 .nav-links a:hover {
   color: #38bdf8;
@@ -154,7 +152,7 @@ body {
   position: absolute;
   left: 10px;
   top: 50%;
-  transform: translate(-50%);
+  transform: translateY(-50%);
   pointer-events: none;
   font-size: 1.2rem;
   color: #888;
@@ -187,8 +185,7 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-button:hover { background-color: #0ea5e9;
-}
+button:hover { background-color: #0ea5e9; }
 .alt-link {
   margin-top: 10px;
 }
@@ -197,12 +194,11 @@ button:hover { background-color: #0ea5e9;
   text-decoration: none;
   font-weight: bold;
 }
-.alt-link a:hover { text-decoration: underline;
-}
+.alt-link a:hover { text-decoration: underline; }
 /*RESPO*/
 @media (max-width: 768px) {
   .banner h2 { font-size: 1.8rem; }
   .banner p { font-size: 1rem; }
   .input-icon input { padding-left: 35px; }
-  .nav-links { gap: 15px;}
+  .nav-links a { font-size: 0.9rem; padding: 8px; }
 }
