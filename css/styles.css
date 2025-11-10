@@ -47,9 +47,10 @@ body {
   gap: 10px;
   margin: 0;
   padding: 0;
+  flex-wrap: nowrap;
 }
 .nav-links li {
-  flex: 1 1 auto; /* se ajusta automáticamente */
+  white-space: nowrap;
 }
 .nav-links a {
   color: #ffffff;
