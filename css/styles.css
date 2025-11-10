@@ -196,3 +196,19 @@ button:hover { background-color: #0ea5e9; }
   .input-icon input { padding-left: 35px; }
   .nav-links a { font-size: 0.9rem; padding: 8px; }
 }
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto; /* deja que crezca */
+    padding: 10px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+  .nav-links a {
+    width: 100%;
+  }
+}
