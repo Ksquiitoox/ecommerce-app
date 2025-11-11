@@ -5,32 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro | TecnoStore</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/a2e0e6e6b3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!--NAVBAR-->
+
+  <!-- NAVBAR -->
   <div id="navbar"></div>
-  <!--CONTENIDO PRINCIPAL-->
-  <div class="register-container">
+
+  <!-- FORMULARIO DE REGISTRO -->
+  <div class="form-container">
     <h2>Crear Cuenta</h2>
-    <input type="text" id="nombreRegistro" placeholder="Nombre de usuario">
-    <input type="password" id="passwordRegistro" placeholder="Contraseña">
-    <button id="btnRegistrar" class="btn-register">Registrarme</button>
+    <form id="RegisterForm" class="form-box">
+
+      <div class="input-icon">
+        <i class="fa-solid fa-user icon"></i>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+      </div>
+
+      <div class="input-icon">
+        <i class="fa-solid fa-user icon"></i>
+        <input type="text" id="apellido" placeholder="Apellido" required>
+      </div>
+
+      <div class="input-icon">
+        <i class="fa-solid fa-envelope icon"></i>
+        <input type="email" id="email" placeholder="Correo electrónico" required>
+      </div>
+
+      <div class="input-icon">
+        <i class="fa-solid fa-lock icon"></i>
+        <input type="password" id="password" placeholder="Contraseña" required>
+      </div>
+
+      <div class="input-icon">
+        <i class="fa-solid fa-calendar-days icon"></i>
+        <input type="date" id="fecha" required>
+      </div>
+
+      <button type="submit">Registrarse</button>
+
+      <div class="alt-link">
+        ¿Ya tenés cuenta? <a href="Login.html">Iniciá sesión</a>
+      </div>
+    </form>
   </div>
 
+  <!-- SCRIPTS -->
   <script src="js/navbarData.js"></script>
   <script src="js/navbar.js"></script>
-  <script>
-    document.getElementById("btnRegistrar").addEventListener("click", () => {
-      const nombre = document.getElementById("nombreRegistro").value.trim();
-      const password = document.getElementById("passwordRegistro").value.trim();
-      if (nombre === "" || password === "") {
-        alert("Completá todos los campos para registrarte.");
-        return;
-      }
-      alert(`Usuario ${nombre} registrado correctamente ✅`);
-      window.location.href = "Login.html";
-    });
-  </script>
-
+  <script src="js/register.js"></script>
 </body>
 </html>

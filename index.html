@@ -3,42 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TecnoStore - Tu Tienda de Tecnología</title>
+  <title>TecnoStore | Inicio</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/a2e0e6e6b3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!--NAVBAR-->
+
+  <!-- NAVBAR -->
   <div id="navbar"></div>
-  <!--PORTADA-->
-  <header class="portada">
-    <div class="portada-content">
-      <h1>Bienvenido a <span>TecnoStore</span></h1>
-      <p>Tu tienda de tecnológica. Los mejores productos a tu alcance.</p>
-      <a href="Categorias.html" class="btn-portada">Explorar productos</a>
+
+  <!-- SECCIÓN PRINCIPAL -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido a <span class="highlight">TecnoStore</span></h1>
+      <p>Tu tienda online de tecnología, innovación y estilo.</p>
+      <a href="Categorias.html" class="btn">Explorar Categorías</a>
     </div>
   </header>
-  <!--PRODUCTOS DESTACADOS-->
-  <main>
-    <section class="productos">
-      <h2>Productos Destacados</h2>
-      <div id="contenedor-productos" class="cards-container"></div>
-    </section>
-    <!--CARRITO-->
-    <section class="carrito">
-      <h2>🛒 Carrito</h2>
-      <div id="contenedor-carrito" class="carrito-contenedor"></div>
-      <p id="total-carrito" class="total">Total: $0</p>
-      <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
-    </section>
-  </main>
-  <!--FOOTER-->
-  <footer class="footer">
-    <p>&copy; 2025 TecnoStore — Todos los derechos reservados.</p>
+
+  <!-- MENSAJE DE BIENVENIDA (solo si está logueado) -->
+  <section id="welcome-section" style="display:none; text-align:center; padding:40px;">
+    <h2 id="welcome-message" style="color:#0f172a;"></h2>
+    <p>Nos alegra verte de nuevo en TecnoStore 😎</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color:#0f172a; color:#fff; text-align:center; padding:20px;">
+    <p>&copy; 2025 TecnoStore - Todos los derechos reservados.</p>
   </footer>
-  <!--SCRIPTS-->
+
   <script src="js/navbarData.js"></script>
   <script src="js/navbar.js"></script>
-  <script src="js/cards.js"></script>
-  <script src="js/carrito.js"></script>
+  <script>
+    // Mostrar mensaje de bienvenida si hay usuario logueado
+    document.addEventListener("DOMContentLoaded", () => {
+      const user = localStorage.getItem("loggedUser");
+      const welcomeSection = document.getElementById("welcome-section");
+      const welcomeMessage = document.getElementById("welcome-message");
+
+      if (user) {
+        const nombreUsuario = JSON.parse(user).nombre || "Usuario";
+        welcomeMessage.textContent = `¡Bienvenido, ${nombreUsuario}! 👋`;
+        welcomeSection.style.display = "block";
+      }
+    });
+  </script>
 </body>
 </html>

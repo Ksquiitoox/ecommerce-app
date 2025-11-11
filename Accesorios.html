@@ -5,27 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TecnoStore | Accesorios</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/a2e0e6e6b3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!--NAVBAR-->
+
+  <!-- NAVBAR -->
   <div id="navbar"></div>
-  <!--CONTENIDO PRINCIPAL-->
-  <section class="productos">
-    <h2>Accesorios</h2>
-    <div id="contenedor-productos" class="cards-container"></div>
+
+  <!-- CONTENIDO -->
+  <section style="padding: 120px 20px; text-align: center;">
+    <h2 style="color:#0f172a;">Accesorios</h2>
+    <p>Todo lo que necesitás para complementar tu experiencia tecnológica.</p>
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px;">
+      <div style="background:#fff; padding:20px; border-radius:10px; width:250px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1d5" class="sub-img" alt="Auriculares">
+        <h3>Auriculares Bluetooth</h3>
+        <p>$95.000</p>
+      </div>
+      <div style="background:#fff; padding:20px; border-radius:10px; width:250px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1587202372775-a5fc58ef0e7e" class="sub-img" alt="Teclado">
+        <h3>Teclado Mecánico RGB</h3>
+        <p>$70.000</p>
+      </div>
+    </div>
   </section>
 
-  <section class="carrito">
-    <h2>🛒 Carrito</h2>
-    <div id="contenedor-carrito" class="carrito-contenedor"></div>
-    <p id="total-carrito" class="total">Total: $0</p>
-    <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
-  </section>
+  <!-- FOOTER -->
+  <footer style="background-color:#0f172a; color:#fff; text-align:center; padding:20px;">
+    <p>&copy; 2025 TecnoStore - Todos los derechos reservados.</p>
+  </footer>
 
   <script src="js/navbarData.js"></script>
   <script src="js/navbar.js"></script>
-  <script src="js/cards.js"></script>
-  <script src="js/carrito.js"></script>
-
 </body>
 </html>

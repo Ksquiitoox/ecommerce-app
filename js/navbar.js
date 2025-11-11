@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   nav.appendChild(logoDiv);
   const ul = document.createElement("ul");
   ul.classList.add("nav-links");
+
   navbarItems.forEach(item => {
     if (usuarioLogueado && (item.title === "Login" || item.title === "Registro")) return;
     if (!usuarioLogueado && item.title === "Logout") return;
@@ -32,19 +33,17 @@ document.addEventListener("DOMContentLoaded", () => {
   if (usuarioLogueado) {
     const saludo = document.createElement("span");
     saludo.textContent = `👋 Hola, ${usuarioLogueado.nombre}`;
-    saludo.style.marginLeft = "15px";
+    saludo.style.marginLeft = "10px";
     saludo.style.fontWeight = "bold";
+    saludo.style.fontSize = "1rem";
     saludo.style.color = "#38bdf8";
     logoDiv.appendChild(saludo);
   }
-  // Logout
-  const logoutBtn = document.getElementById("logoutBtn");
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      localStorage.removeItem("usuarioLogueado");
-      alert(`Cerraste sesión correctamente, Hasta la próxima, ${usuarioLogueado.nombre} 👋`);
-      window.location.href = "Login.html";
-    });
+  // Bloquear acceso a páginas restringidas si no hay login
+  const requiereLogin = ["Categorias.html", "Laptops.html", "Smartphones.html", "Accesorios.html"];
+  const paginaActual = window.location.pathname.split("/").pop();
+  if (requiereLogin.includes(paginaActual) && !usuarioLogueado) {
+    alert("Tenés que iniciar sesión para acceder a esta sección.");
+    window.location.href = "Login.html";
   }
 });

@@ -3,25 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TecnoStore | Categorías</title>
+  <title>TecnoStore | Home</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/a2e0e6e6b3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!--NAVBAR-->
+
+  <!-- NAVBAR -->
   <div id="navbar"></div>
-  <!--CATEGORIAS-->
-  <section class="productos">
-    <h2>Categorías</h2>
-    <p>Elegí una categoría para explorar nuestros productos:</p>
-    <div class="cards-container">
-      <a href="Laptops.html" class="btn-agregar">Laptops</a>
-      <a href="Smartphones.html" class="btn-agregar">Smartphones</a>
-      <a href="Accesorios.html" class="btn-agregar">Accesorios</a>
+
+  <!-- BANNER -->
+  <section class="banner">
+    <div class="banner-content">
+      <img src="img/logo.png" alt="Logo TecnoStore" class="banner-logo">
+      <h2>Bienvenido a TecnoStore</h2>
+      <p>Tu tienda de tecnología de confianza</p>
+      <a href="Categorias.html" class="btn-banner">Ver productos</a>
     </div>
   </section>
 
+  <!-- SECCIÓN DE DESTACADOS -->
+  <section style="padding: 40px; text-align: center;">
+    <h2 style="color:#0f172a;">Productos Destacados</h2>
+    <p>Explorá nuestras mejores ofertas en laptops, smartphones y accesorios.</p>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;">
+      <div style="background:#fff; padding:15px; border-radius:10px; width:250px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" class="sub-img" alt="Laptop">
+        <h3>Laptop Pro X15</h3>
+        <p>$850.000</p>
+      </div>
+      <div style="background:#fff; padding:15px; border-radius:10px; width:250px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1510552776732-03e61cf4b144" class="sub-img" alt="Smartphone">
+        <h3>Smartphone Galaxy Z</h3>
+        <p>$600.000</p>
+      </div>
+      <div style="background:#fff; padding:15px; border-radius:10px; width:250px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1d5" class="sub-img" alt="Accesorio">
+        <h3>Auriculares Inalámbricos</h3>
+        <p>$95.000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color:#0f172a; color:#fff; text-align:center; padding:20px;">
+    <p>&copy; 2025 TecnoStore - Todos los derechos reservados.</p>
+    <p>📧 contacto@tecnostore.com | 📞 +54 11 4567-8901</p>
+  </footer>
+
+  <!-- SCRIPTS -->
   <script src="js/navbarData.js"></script>
   <script src="js/navbar.js"></script>
-
 </body>
 </html>
