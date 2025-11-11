@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
   logoutBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
-    const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
-    if (usuarioLogueado) {
-      alert(`Cerraste sesión correctamente. ¡Hasta la próxima, ${usuarioLogueado.nombre}! 👋`);
-    }
+    const usuario = JSON.parse(localStorage.getItem("loggedUser"));
+    const nombre = usuario?.nombre || "usuario";
 
-    localStorage.removeItem("usuarioLogueado");
+    // Eliminar usuario logueado
+    localStorage.removeItem("loggedUser");
+
+    alert(`Cerraste sesión correctamente. ¡Hasta la próxima, ${nombre}! 👋`);
     window.location.href = "Login.html";
   });
 });

@@ -11,24 +11,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const password = document.getElementById("password").value.trim();
     const fecha = document.getElementById("fecha").value;
 
+    // Validar campos vacíos
     if (!nombre || !apellido || !email || !password || !fecha) {
       alert("Por favor, completá todos los campos.");
       return;
     }
 
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-    const existe = usuarios.some(u => u.email === email);
 
+    // Verificar si el correo ya existe
+    const existe = usuarios.some(u => u.email === email);
     if (existe) {
       alert("Este correo ya está registrado. Iniciá sesión o usá otro correo.");
       return;
     }
 
+    // Crear nuevo usuario
     const nuevoUsuario = { nombre, apellido, email, password, fecha };
+
+    // Guardar en la lista general de usuarios
     usuarios.push(nuevoUsuario);
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-    alert(`Registro exitoso. ¡Bienvenido ${nombre}! Ahora podés iniciar sesión.`);
-    window.location.href = "Login.html";
+    // Guardar sesión activa del nuevo usuario
+    localStorage.setItem("loggedUser", JSON.stringify(nuevoUsuario));
+
+    alert(`Registro exitoso. ¡Bienvenido ${nombre}! 👋`);
+    window.location.href = "index.html";
   });
 });
