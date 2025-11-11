@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   nav.appendChild(ul);
   navbarContainer.appendChild(nav);
+  // Mostrar saludo si hay usuario logueado
   if (usuarioLogueado) {
     const saludo = document.createElement("span");
     saludo.textContent = `👋 Hola, ${usuarioLogueado.nombre}`;
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     saludo.style.color = "#38bdf8";
     logoDiv.appendChild(saludo);
   }
+  // Logout
   const logoutBtn = document.getElementById("logoutBtn");
   if (logoutBtn) {
     logoutBtn.addEventListener("click", (e) => {

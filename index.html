@@ -8,21 +8,37 @@
 </head>
 <body>
   <!--NAVBAR-->
-  <nav id="navbar"></nav>
-  <!--CONTENIDO PRINCIPAL-->
-  <section class="banner">
-    <div class="banner-content">
-      <h2>Bienvenido a TecnoStore</h2>
-      <p>Los mejores productos tecnológicos a tu alcance.</p>
-      <a href="Categorias.html" class="btn-banner">Ver productos</a>
+  <div id="navbar"></div>
+  <!--PORTADA-->
+  <header class="portada">
+    <div class="portada-content">
+      <h1>Bienvenido a <span>TecnoStore</span></h1>
+      <p>Tu tienda de tecnológica. Los mejores productos a tu alcance.</p>
+      <a href="Categorias.html" class="btn-portada">Explorar productos</a>
     </div>
-  </section>
+  </header>
+  <!--PRODUCTOS DESTACADOS-->
+  <main>
+    <section class="productos">
+      <h2>Productos Destacados</h2>
+      <div id="contenedor-productos" class="cards-container"></div>
+    </section>
+    <!--CARRITO-->
+    <section class="carrito">
+      <h2>🛒 Carrito</h2>
+      <div id="contenedor-carrito" class="carrito-contenedor"></div>
+      <p id="total-carrito" class="total">Total: $0</p>
+      <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
+    </section>
+  </main>
   <!--FOOTER-->
-  <footer style="background-color:#0f172a; color:white; text-align:center; padding:15px;">
-    <p>© 2025 TecnoStore — Todos los derechos reservados</p>
+  <footer class="footer">
+    <p>&copy; 2025 TecnoStore — Todos los derechos reservados.</p>
   </footer>
-  <!--SCRIPTSA-->
+  <!--SCRIPTS-->
   <script src="js/navbarData.js"></script>
   <script src="js/navbar.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/carrito.js"></script>
 </body>
 </html>

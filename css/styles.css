@@ -5,264 +5,278 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f5f5;
 }
-.sub-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-}
+
 /*NAVBAR*/
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0f172a;
-  padding: 0 10px;
+  background-color: #0ea5e9;
+  color: white;
+  padding: 10px 20px;
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 100;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  animation: slideDown 1s ease-out forwards;
-  overflow-x: auto;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
+
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .logo img {
   width: 50px;
   height: 50px;
+  border-radius: 8px;
 }
-.logo h1 {
-  color: #ffffff;
-  font-size: 1.5rem;
-  margin: 0;
-}
+
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   margin: 0;
-  padding: 0;
-  flex-wrap: nowrap;
-  white-space: nowrap;
 }
-.nav-links li {
-  flex-shrink: 0;
-}
-.nav-links::-webkit-scrollbar {
-  display: none; /* oculta scrollbar visual */
-}
+
 .nav-links a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 8px;
-  transition: color 0.3s;
-  display: inline-block;
+  transition: color 0.3s ease;
 }
+
 .nav-links a:hover {
-  color: #38bdf8;
+  color: #e0f2fe;
 }
+
 .nav-links a.active {
-  color: #38bdf8;
-  border-bottom: 2px solid #38bdf8;
+  border-bottom: 2px solid white;
 }
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-50px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-/*BANNER*/
-.banner {
-  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
+
+/*PORTADA*/
+.portada {
+  background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+  color: white;
   text-align: center;
   padding: 100px 20px;
-  position: relative;
-  overflow: hidden;
 }
-.banner-content {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1.2s ease-out forwards;
+
+.portada-content h1 {
+  font-size: 3rem;
 }
-.banner-content h2,
-.banner-content p {
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-  backdrop-filter: blur(2px);
-  background-color: rgba(0,0,0,0.25);
-  display: inline-block;
+
+.portada-content span {
+  color: #facc15;
+}
+
+.btn-portada {
+  background-color: #facc15;
+  color: #1e293b;
   padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-portada:hover {
+  background-color: #fde047;
+}
+
+/*FOOTER*/
+.footer {
+  background-color: #0ea5e9;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/*LOGIN*/
+.login-container {
+  max-width: 400px;
+  background-color: white;
+  margin: 100px auto;
+  padding: 30px;
   border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-@keyframes fadeIn {
-  to { opacity: 1; transform: translateY(0);}
-}
-.banner-logo {
-  width: 120px;
-  height: auto;
-}
-.banner h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-.banner p {
-  font-size: 1.2rem;
+
+.login-container h2 {
+  text-align: center;
   margin-bottom: 20px;
 }
-.btn-banner {
-  background-color: #38bdf8;
-  color: #0f172a;
-  text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
-.btn-banner:hover {
+
+.btn-login {
+  background-color: #0ea5e9;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background-color: #0284c7;
+}
+
+/*REGISTRO*/
+.register-container {
+  max-width: 400px;
+  background-color: white;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn-register {
+  background-color: #38bdf8;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-register:hover {
   background-color: #0ea5e9;
 }
-/*CARDS DE PRODUCTOS*/
+
+/* --- Productos --- */
+.productos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
-  padding: 20px;
+  justify-content: center;
 }
+
 .card {
-  background-color: #fff;
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  width: 250px;
-  text-align: center;
   padding: 15px;
-  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 250px;
+  transition: transform 0.3s ease;
 }
+
 .card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.03);
 }
+
 .card img {
   width: 100%;
-  height: 180px;
+  height: 160px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
 }
+
+.card h3 {
+  margin: 10px 0 5px 0;
+}
+
 .precio {
-  color: #0ea5e9;
   font-weight: bold;
-  margin: 10px 0;
+  color: #0ea5e9;
+  margin: 8px 0;
 }
+
 .cantidad {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
+  margin-bottom: 10px;
 }
+
 .btn-cantidad {
   background-color: #0ea5e9;
-  color: #fff;
+  color: white;
   border: none;
-  border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
+  border-radius: 6px;
 }
+
 .btn-agregar {
-  margin-top: 10px;
   background-color: #38bdf8;
   color: white;
   border: none;
-  border-radius: 8px;
   padding: 8px 15px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  font-weight: bold;
 }
+
 .btn-agregar:hover {
   background-color: #0ea5e9;
 }
-/*FORMULARIO DEL LOGIN Y REGISTRO*/
-.form-container {
-  max-width: 400px;
-  margin: 100px auto;
-  padding: 30px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+/* --- Carrito --- */
+.carrito {
+  margin-top: 50px;
+  background-color: #f0f9ff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
-.form-container h2 {
-  margin-bottom: 20px;
-  color: #0f172a;
-}
-.form-box {
+
+.item-carrito {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 6px;
 }
-/*ICONOS*/
-.input-icon {
-  position: relative;
-  width: 100%;
-}
-.input-icon .icon {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  font-size: 1.2rem;
-  color: #888;
-}
-.input-icon input {
-  width: 100%;
-  padding: 10px 10px 10px 35px;
-  border: 1px solid #cbd5e1;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: all 0.3s;
-}
-/*VALIDACION*/
-input:invalid { border-color: red; }
-input:valid { border-color: green; }
-/*ANIMACION*/
-input:focus {
-  border-color: #38bdf8;
-  box-shadow: 0 0 5px #38bdf8;
-  outline: none;
-}
-/*BOTONES*/
-button {
-  background-color: #38bdf8;
-  color: #0f172a;
+
+.btn-vaciar {
+  background-color: #ef4444;
+  color: white;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
-  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
-}
-button:hover {
-  background-color: #0ea5e9;
-}
-.alt-link {
-  margin-top: 10px;
-}
-.alt-link a {
-  color: #38bdf8;
-  text-decoration: none;
   font-weight: bold;
 }
-.alt-link a:hover { text-decoration: underline; }
-/*RESPO*/
-@media (max-width: 768px) {
-  .banner h2 { font-size: 1.8rem; }
-  .banner p { font-size: 1rem; }
-  .input-icon input { padding-left: 35px; }
-  .nav-links {
-    gap: 10px;
-  }
+
+.btn-vaciar:hover {
+  background-color: #dc2626;
 }
