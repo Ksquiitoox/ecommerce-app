@@ -3,50 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TecnoStore | Inicio</title>
+  <title>TecnoStore - Tu Tienda de Tecnología</title>
   <link rel="stylesheet" href="css/styles.css">
-  <script src="https://kit.fontawesome.com/a2e0e6e6b3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-  <!-- NAVBAR -->
-  <div id="navbar"></div>
-
-  <!-- SECCIÓN PRINCIPAL -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Bienvenido a <span class="highlight">TecnoStore</span></h1>
-      <p>Tu tienda online de tecnología, innovación y estilo.</p>
-      <a href="Categorias.html" class="btn">Explorar Categorías</a>
+  <!--NAVBAR-->
+  <nav id="navbar"></nav>
+  <!--CONTENIDO PRINCIPAL-->
+  <section class="banner">
+    <div class="banner-content">
+      <h2>Bienvenido a TecnoStore</h2>
+      <p>Los mejores productos tecnológicos a tu alcance.</p>
+      <a href="Categorias.html" class="btn-banner">Ver productos</a>
     </div>
-  </header>
-
-  <!-- MENSAJE DE BIENVENIDA (solo si está logueado) -->
-  <section id="welcome-section" style="display:none; text-align:center; padding:40px;">
-    <h2 id="welcome-message" style="color:#0f172a;"></h2>
-    <p>Nos alegra verte de nuevo en TecnoStore 😎</p>
   </section>
-
-  <!-- FOOTER -->
-  <footer style="background-color:#0f172a; color:#fff; text-align:center; padding:20px;">
-    <p>&copy; 2025 TecnoStore - Todos los derechos reservados.</p>
+  <!--FOOTER-->
+  <footer style="background-color:#0f172a; color:white; text-align:center; padding:15px;">
+    <p>© 2025 TecnoStore — Todos los derechos reservados</p>
   </footer>
-
+  <!--SCRIPTSA-->
   <script src="js/navbarData.js"></script>
   <script src="js/navbar.js"></script>
-  <script>
-    // Mostrar mensaje de bienvenida si hay usuario logueado
-    document.addEventListener("DOMContentLoaded", () => {
-      const user = localStorage.getItem("loggedUser");
-      const welcomeSection = document.getElementById("welcome-section");
-      const welcomeMessage = document.getElementById("welcome-message");
-
-      if (user) {
-        const nombreUsuario = JSON.parse(user).nombre || "Usuario";
-        welcomeMessage.textContent = `¡Bienvenido, ${nombreUsuario}! 👋`;
-        welcomeSection.style.display = "block";
-      }
-    });
-  </script>
 </body>
 </html>
