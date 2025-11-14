@@ -130,7 +130,7 @@ body {
 .form-container {
   max-width: 400px;
   margin: 100px auto;
-  padding: 50px;
+  padding: 80px;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
@@ -143,7 +143,7 @@ body {
 .form-box {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 15px;
 }
 /*ICONOS*/
 .input-icon {
