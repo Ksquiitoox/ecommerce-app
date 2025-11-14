@@ -128,7 +128,7 @@ body {
 }
 /*FORMULARIO DEL LOGIN Y REGISTRO*/
 .form-container {
-  max-width: 500;
+  max-width: 400;
   margin: 10px auto;
   padding: 70px;
   background-color: #ffffff;
@@ -137,7 +137,7 @@ body {
   text-align: center;
 }
 .form-container h2 {
-  margin-bottom: 100px;
+  margin-bottom: 0px;
   color: #0f172a;
 }
 .form-box {
