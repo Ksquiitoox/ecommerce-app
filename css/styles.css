@@ -144,6 +144,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  align-items: center;
 }
 /*ICONOS*/
 .input-icon {
@@ -199,13 +200,6 @@ button:hover {
   font-weight: bold;
 }
 .alt-link a:hover { text-decoration: underline; }
-.center-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 80px);
-  padding: 20px;
-}
 /*RESPO*/
 @media (max-width: 768px) {
   .banner h2 { font-size: 1.8rem; }
