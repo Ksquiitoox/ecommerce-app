@@ -1,0 +1,110 @@
+/* GENERAL */
+body {
+  margin: 0;
+  padding-top: 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar .logo img {
+  width: 120px;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar .nav-links li a:hover {
+  color: #38bdf8;
+}
+
+/* FORMULARIO CENTRADO */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+/* CUADRO DEL FORM */
+.form-box {
+  width: 320px;           /* 🔥 MISMO ANCHO PARA TODO */
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* INPUT CON ICONO */
+.input-icon {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-icon input {
+  width: 100%;         /* 🔥 IMPORTANTE */
+  padding: 12px 12px 12px 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.input-icon .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* BOTÓN */
+button {
+  width: 100%;         /* 🔥 MISMO LARGO QUE LOS INPUTS */
+  padding: 15px; 
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #0ea5e9;
+}
+
+/* LINK ALTERNATIVO */
+.alt-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.alt-link a {
+  color: #0f172a;
+  font-weight: bold;
+}
