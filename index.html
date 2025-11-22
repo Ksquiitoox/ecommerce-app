@@ -3,26 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <title>TecnoStore | Home</title>
+  <!--VINCULO AL CSS-->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <!--NAVBAR-->
-  <nav>
+  <header class="navbar">
+    <div class="navbar-left">
     <!--LOGO DE LA TIENDA-->
-    <a href="/index.html">
-      <img src="img/logo.png" alt="Logo TecnoStore" width="40" height="40">
-    </a>
+    <a href="/index.html"><img src="img/logo.png" alt="Logo TecnoStore" width="40" height="40"></a>
+    <h1 class="navbar-title">TecnoStore</h1>
+    </div>
     <!--LINKS DE NAVEGACION-->
-    <a href="/index.html">Home</a>
-    <a href="/pages/Laptops.html">Laptops</a>
-    <a href="/pages/Smartphones.html">Smartphones</a>
-    <a href="/pages/Accesorios.html">Accesorios</a>
-    <a href="/pages/Login.html">Ingresar</a>
-    <a href="/pages/Register.html">Registrarse</a>
+    <div>
+      <ul class="navbar-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/Laptops.html">Laptops</a></li>
+        <li><a href="/pages/Smartphones.html">Smartphones</a></li>
+        <li><a href="/pages/Accesorios.html">Accesorios</a></li>
+        <li><a href="/pages/Login.html">Ingresar</a></li>
+        <li><a href="/pages/Register.html">Registrarse</a></li>
+      </ul>
+    </div>
     <!--BOTON LOGOUT-->
-    <button type="button">Logout</button>
-  </nav>
+    <button type="button" class="btn-logout">Logout</button>
+  </header>
   <!--CONTENIDO PRINCIPAL-->
-  <h1>TecnoStore</h1>
-  <p>Bienvenido a TecnoStore, tu tienda de tecnología online.</p>
+  <main>
+    <!--titulo en body-->
+    <section class="principal"> 
+      <h1>TecnoStore</h1>
+      <p>Bienvenido a TecnoStore, tu tienda de tecnología online.</p>
+    </section>
+    <!--Seccion de Cards-->
+    <section class="card-seccion"> 
+      <h3>Producto destacado</h3>
+      <div class = "seccion-cuadricula">
+        <article class = "card-contenedor">
+          <span class = "card-etiqueta">Laptop</span>
+          <h4 class = "card-titulo">Laptop Gamer RTX</h4>
+          <p class = "card-descripcion">Rendimiento ideal para estudio, trabajo y juegos.</p>
+          <p class = "card-precio">$ 1.200.000</p>
+          <button type = "button" class = "btn-primario">Ver más</button>
+        </article>
+        </span>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
