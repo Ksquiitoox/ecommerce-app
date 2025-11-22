@@ -31,7 +31,7 @@ h1, h2, h3 {
 /*NAVBAR*/
 .navbar {
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: space-between;
   background-color: var(--color-navbar);
   color: #ffffff;
