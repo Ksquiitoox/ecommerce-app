@@ -68,11 +68,14 @@ h1, h2, h3 {
   color: #ffffff;
   text-decoration: underline;
 }
-.btn-diseño {
+.btn-disenio {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
   border: 1px solid #f97373;
   background-color: transparent;
   color: #fecaca;
-  padding: 6px;
+  padding: 20px;
   border-radius: 999px;
   cursor: pointer;
   font-size: 0.9rem;
