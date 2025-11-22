@@ -37,9 +37,9 @@ h1, h2, h3 {
   color: #ffffff;
   padding: 10px 20px;
 }
-.navbar-left {
+.navbar-posicion {
   display: flex;
-  align-items: center;
+  align-items: right;
   gap: 10px;
 }
 .navbar-logo {
