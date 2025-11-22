@@ -50,9 +50,10 @@ h1, h2, h3 {
 }
 .navbar-title {
   font-size: 1.2rem;
-  margin: 0;
+  margin: 10;
 }
 .navbar-links {
+  display: flex;
   list-style: none;
   display: flex;
   gap: 15px;
@@ -69,7 +70,7 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 .btn-disenio {
-  display: block;
+  display: flex;
   margin-left: auto;
   border: 1px solid #f97373;
   background-color: transparent;
