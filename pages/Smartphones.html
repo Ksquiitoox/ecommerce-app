@@ -3,28 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <title>TecnoStore | Smartphones</title>
+  <!--VINCULO A CSS-->
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <!--NAVBAR-->
-  <nav>
-    <!--LOGO DE LA TIENDA-->
-    <a href="/index.html">
-      <img src="img/logo.png" alt="Logo TecnoStore" width="40" height="40">
-    </a>
+  <!--NAVBAR COMO INDEX-->
+  <header class="navbar">
+    <div class="navbar-left">
+      <!--LOGO DE LA TIENDA-->
+      <a href="/index.html">
+        <img src="img/logo.png" alt="Logo TecnoStore" width="40" height="40">
+      </a>
+      <h1 class="navbar-title">TecnoStore</h1>
+    </div>
     <!--LINKS DE NAVEGACION-->
-    <a href="/index.html">Home</a>
-    <a href="/pages/Laptops.html">Laptops</a>
-    <a href="/pages/Smartphones.html">Smartphones</a>
-    <a href="/pages/Accesorios.html">Accesorios</a>
-    <a href="/pages/Login.html">Ingresar</a>
-    <a href="/pages/Register.html">Registrarse</a>
+    <div>
+      <ul class="navbar-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/Laptops.html">Laptops</a></li>
+        <li><a href="/pages/Smartphones.html">Smartphones</a></li>
+        <li><a href="/pages/Accesorios.html">Accesorios</a></li>
+        <li><a href="/pages/Login.html">Ingresar</a></li>
+        <li><a href="/pages/Register.html">Registrarse</a></li>
+      </ul>
+    </div>
     <!--BOTON LOGOUT-->
-    <button type="button">Logout</button>
-  </nav>
-   <!--TITULO DE LA CATEGORIA EN CONTENIDO PRINCIPAL-->
-  <h1>Smartphones</h1>
-  <p>Sección de smartphones de TecnoStore.</p>
-
+    <button type="button" class="btn-logout">Logout</button>
+  </header>
+   <!--CONTENIDO PRINCIPAL TITULO DE LA CATEGORIAS-->
+   <Main>
+    <section class="principal">
+      <h1>Smartphones</h1>
+      <p>Sección de smartphones de TecnoStore.</p>
+    </section>
+    <section>
+      <div class="card-seccion">
+        <h3>Productos Destacados</h3>
+        <div class="card-cuadricula">
+          <article class="card-contenedor">
+            <span class="card-etiqueta">Smartphone</span>
+            <h4 class="card-titulo">Smartphone X200</h4>
+            <p class="card-descripcion">Pantalla AMOLED, cámara de 108MP, batería de larga duración.</p>
+            <p class="card-precio">$ 899.000</p>
+            <button type="button" class="btn-primario">Ver más</button>
+          </article>
+          <article class="card-contenedor">
+            <span class="card-etiqueta">Smartphone</span>
+            <h4 class="card-titulo">Smartphone Y100</h4>
+            <p class="card-descripcion">Rendimiento potente, diseño elegante, carga rápida.</p>
+            <p class="card-precio">$ 749.000</p>
+            <button type="button" class="btn-primario">Ver más</button>
+          </article>
+          <article class="card-contenedor">
+            <span class="card-etiqueta">Smartphone</span>
+            <h4 class="card-titulo">Smartphone Z50</h4>
+            <p class="card-descripcion">Cámara cuádruple, pantalla grande, sistema operativo actualizado.</p>
+            <p class="card-precio">$ 599.000</p>
+            <button type="button" class="btn-primario">Ver más</button>
+          </article>
+        </div>
+      </div>
+    </section>  
+</Main>
 </body>
 </html>

@@ -100,7 +100,7 @@ h1, h2, h3 {
   margin-bottom: 10px;
 }
 /*Layout general para las cards*/
-.seccion-cuadricula {
+.card-cuadricula {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;

@@ -3,28 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>TecnoStore | Accesorios</title>
+  <!--VINCULO A CSS-->
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <!--NAVBAR-->
-  <nav>
-    <!--LOGO DE LA TIENDA-->
-    <a href="/index.html">
-      <img src="img/logo.png" alt="Logo TecnoStore" width="40" height="40">
-    </a>
+  <header class="navbar">
+    <div class="navbar-left">
+      <!--LOGO DE LA TIENDA-->
+      <a href="/index.html">
+        <img src="img/logo.png" alt="Logo TecnoStore" width="40" height="40">
+      </a>
+      <h1 class="navbar-title">TecnoStore</h1>
+    </div>
     <!--LINKS DE NAVEGACION-->
-    <a href="/index.html">Home</a>
-    <a href="/pages/Laptops.html">Laptops</a>
-    <a href="/pages/Smartphones.html">Smartphones</a>
-    <a href="/pages/Accesorios.html">Accesorios</a>
-    <a href="/pages/Login.html">Ingresar</a>
-    <a href="/pages/Register.html">Registrarse</a>
+    <div>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/Laptops.html">Laptops</a></li>
+        <li><a href="/pages/Smartphones.html">Smartphones</a></li>
+        <li><a href="/pages/Accesorios.html">Accesorios</a></li>
+        <li><a href="/pages/Login.html">Ingresar</a></li>
+        <li><a href="/pages/Register.html">Registrarse</a></li>
+      </ul>
+    </div>
+  
     <!--BOTON LOGOUT-->
-    <button type="button">Logout</button>
-  </nav>
-  <!--TITULO DE LA CATEGORIA EN CONTENIDO PRINCIPAL-->
-  <h1>Accesorios</h1>
-  <p>Sección de accesorios de TecnoStore.</p>
-
+    <button type="button" class="btn-logout">Logout</button>
+  </header>
+  <!--CONTENIDO PRINCIPAL TITULO DE LAs CATEGORIAs-->
+  
+  <main>
+    <section class="principal">
+      <h1>Accesorios</h1>
+      <p>Sección de accesorios de TecnoStore.</p>
+    </section>
+    <section>
+      <div class="card-seccion">
+        <h3>Producto destacado</h3>
+        <div class="card-cuadricula">
+          <article class="card-contenedor">
+            <span class="card-etiqueta">Audífonos</span>
+            <h4 class="card-titulo">Audífonos Inalámbricos XYZ</h4>
+            <p class="card-descripcion">Sonido envolvente y cancelación de ruido.</p>
+            <p class="card-precio">$ 250.000</p>
+            <button type="button" class="btn-primario">Ver más</button>
+          </article>
+        </div>
+    </section>
+  </main>
 </body>
 </html>
