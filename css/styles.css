@@ -22,6 +22,13 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--color-bg-page);
   color: var(--color-text-main);
+  /* HACK para IE y Edge - Elimina la X en los inputs */
+::-ms-clear { display: none; }
+
+input[type="text"]:focus,
+textarea:focus { outline: none; }
+
+address { font-style: normal; }
 }
 main {
   max-width: 1100px;
