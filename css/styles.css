@@ -14,7 +14,11 @@
   box-sizing: border-box;
 }
 body {
+  position: static;
   margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--color-bg-page);
   color: var(--color-text-main);
@@ -71,7 +75,7 @@ h1, h2, h3 {
 }
 .btn-disenio {
   display: flex;
-  margin-left: auto;
+  margin: auto;
   border: 1px solid #f97373;
   background-color: transparent;
   color: #fecaca;
