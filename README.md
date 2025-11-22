@@ -10,7 +10,7 @@
 
 Incluye:
         Página de Inicio (index.html)
-        Página de Categorías (Categorias.html):
+        Categorias:
         1 - Laptops (Laptops.html);
         2 - Smartphones (Smartphones.html);
         3 - Accesorios (Accesorios.html).
