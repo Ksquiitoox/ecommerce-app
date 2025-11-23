@@ -6,16 +6,59 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+  <!--NAVBAR-->
+  <header class="navbar">
+    <div class="navbar-posicion">
+      <!--LOGO DE LA TIENDA-->
+      <a href="/index.html"><img src="../img/logo.png" alt="Logo TecnoStore" width="40" height="40"></a>
+      <h1 class="navbar-title">TecnoStore</h1>
+    </div>
+    <!--LINKS DE NAVEGACION-->
+    <div>
+      <ul class="navbar-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/Laptops.html">Laptops</a></li>
+        <li><a href="/pages/Smartphones.html">Smartphones</a></li>
+        <li><a href="/pages/Accesorios.html">Accesorios</a></li>
+      </ul>
+    </div>
+    <!--BOTONES-->
+      <button type="button" class="btn-disenio"><a href="/pages/Login.html">Ingresar</a></button>
+      <button type="button" class="btn-disenio"><a href="/pages/Register.html">Registrarse</a></button>
+      <button type="button" class="btn-disenio">Logout</button>
+  </header>
   <!--CONTENIDO PRINCIPAL-->
-  <h1>Login</h1>
-  <form action="#" method="post">
-    <label for="email">Email:</label><br>
-    <input id="email" name="email" type="email" required><br><br>
-
-    <label for="password">Contraseña:</label><br>
-    <input id="password" name="password" type="password" required><br><br>
-    <!--BOTON INICIAR SESION-->
-    <button type="submit">Iniciar sesión</button>
-  </form>
+  <main>
+    <section class="principal">
+      <h1>Bienvendo a TecnoStore</h1>
+      <p>Accedé a tu cuenta con tu dirección de correo electrónico o crea tu cuenta si aún no tenes una.</p>
+    </section>
+    <section class="card-contenedor">
+      <div class="card-seccion">
+        <h2>Ya estoy Registro</h2>
+        <div class="card-cuadricula">
+          <article class="card-contenedor">
+            <form action="#" method="post">
+            <label for="email">Email:</label><br>
+            <input id="email" name="email" type="email" required><br><br>
+            <label for="password">Contraseña:</label><br>
+            <input id="password" name="password" type="password" required><br><br>
+            <!--BOTON INICIAR SESION-->
+            <button type="submit" class="btn-primario">Iniciar sesión</button>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="principal">
+      <div class="card-seccion">
+        <h2>Aún no tengo cuenta</h2>
+        <hp>Crear una cuenta tiene muchos beneficios: Pagar de manera rápida, guardar más de una dirección, realizar el seguimiento de tus pedidos y mucho más.
+          Si todavía no tienes una cuenta en Cetrogar utilizá esta opción para acceder al formulario de registro. Te solicitaremos la información necesaria para agilizar el proceso de compra.
+        </p>
+        <button type="button" class="btn-primario"><a href="/pages/Register.html">Crear cuenta</a></button>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

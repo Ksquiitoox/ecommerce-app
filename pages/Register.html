@@ -6,25 +6,61 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+  <!--NAVBAR-->
+  <header class="navbar">
+    <div class="navbar-posicion">
+    <!--LOGO DE LA TIENDA-->
+    <a href="/index.html"><img src="../img/logo.png" alt="Logo TecnoStore" width="40" height="40"></a>
+    <h1 class="navbar-title">TecnoStore</h1>
+    </div>
+    <!--LINKS DE NAVEGACION-->
+    <div>
+      <ul class="navbar-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/Laptops.html">Laptops</a></li>
+        <li><a href="/pages/Smartphones.html">Smartphones</a></li>
+        <li><a href="/pages/Accesorios.html">Accesorios</a></li>
+      </ul>
+    </div>
+    <!--BOTONES-->
+      <button type="button" class="btn-disenio"><a href="/pages/Login.html">Ingresar</a></button>
+      <button type="button" class="btn-disenio"><a href="/pages/Register.html">Registrarse</a></button>
+      <button type="button" class="btn-disenio">Logout</button>
+  </header>
   <!--CONTENIDO PRINCIPAL-->
-  <h1>Registro</h1>
-  <form action="#" method="post">
-    <label for="nombre">Nombre:</label><br>
-    <input id="nombre" name="nombre" type="text" required><br><br>
+  <main>
+    <section class="principal">
+      <h1>Bienvendo a TecnoStore</h1>
+      <p>Accedé a tu cuenta con tu dirección de correo electrónico o crea tu cuenta si aún no tenes una.</p>
+    </section>
+    <section class="card-contenedor">
+      <div class="card-seccion">
+        <h3>Registro</h3>
+        <div class="card-cuadricula">
+          <article class="card-contenedor">
+            <form action="#" method="post">
+              <label for="nombre">Nombre:</label><br>
+              <input id="nombre" name="nombre" type="text" required><br><br>
 
-    <label for="apellido">Apellido:</label><br>
-    <input id="apellido" name="apellido" type="text" required><br><br>
+              <label for="apellido">Apellido:</label><br>
+              <input id="apellido" name="apellido" type="text" required><br><br>
 
-    <label for="email">Email:</label><br>
-    <input id="email" name="email" type="email" required><br><br>
+              <label for="email">Email:</label><br>
+              <input id="email" name="email" type="email" required><br><br>
 
-    <label for="password">Contraseña:</label><br>
-    <input id="password" name="password" type="password" required><br><br>
+              <label for="password">Contraseña:</label><br>
+              <input id="password" name="password" type="password" required><br><br>
 
-    <label for="fechaNacimiento">Fecha de nacimiento:</label><br>
-    <input id="fechaNacimiento" name="fechaNacimiento" type="date" required><br><br>
-    <!--BOTON REGISTRARSE-->
-    <button type="submit">Registrarse</button>
+              <label for="fechaNacimiento">Fecha de nacimiento:</label><br>
+              <input id="fechaNacimiento" name="fechaNacimiento" type="date" required><br><br>
+              
+              <!--BOTON REGISTRARSE-->
+              <button type="submit" class="btn-primario">Registrarse</button>
+            </article>
+        </div>
+      </div>
+    </section>
+  </main>
   </form>
 </body>
 </html>

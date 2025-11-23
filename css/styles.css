@@ -16,7 +16,6 @@
 body {
   position: static;
   margin: 0;
-  padding: 0;
   font-size: 1rem;
   font-weight: normal;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,15 +41,15 @@ h1, h2, h3 {
 /*NAVBAR*/
 .navbar {
   display: flex;
-  align-items: right;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
   background-color: var(--color-navbar);
   color: #ffffff;
   padding: 10px 20px;
 }
 .navbar-posicion {
   display: flex;
-  align-items: right;
+  align-items: center;
   gap: 10px;
 }
 .navbar-logo {
@@ -61,14 +60,14 @@ h1, h2, h3 {
 }
 .navbar-title {
   font-size: 1.2rem;
-  margin: 10;
+  margin: 0;
 }
 .navbar-links {
   display: flex;
+  align-items: center;
+  gap: 30px;
   list-style: none;
-  display: flex;
-  gap: 15px;
-  margin: 0;
+  margin: 0 20px;
   padding: 0;
 }
 .navbar-links a {
@@ -81,22 +80,26 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 .btn-disenio {
-  display: flex;
-  margin: auto;
   border: 1px solid #f97373;
   background-color: transparent;
   color: #fecaca;
-  padding: 10px;
-  border-radius: 999px;
+  padding: 8px 16px;
+  border-radius: 99px;
   cursor: pointer;
   font-size: 0.9rem;
+  text-decoration: none;
 }
-.btn-diseño:hover {
+.navbar .btn-disenio:first-of-type {
+  margin-left: auto;
+}
+
+  .btn-diseño:hover {
   background-color: #b91c1c;
   color: #ffffff;
 }
 /*HOME / LAYOUT CARDS*/
 .principal {
+  text-align: center;
   background-color: var(--color-bg-card);
   border-radius: 12px;
   padding: 20px;
@@ -121,6 +124,7 @@ h1, h2, h3 {
 }
 /*Prototipo de card*/
 .card-contenedor {
+  text-align: center;
   background-color: var(--color-bg-card);
   border-radius: 12px;
   padding: 16px;
@@ -152,7 +156,7 @@ h1, h2, h3 {
   font-size: 1.1rem;
 }
 .btn-primario {
-  align-self: flex-start;
+  align-self: center;
   padding: 8px 14px;
   border-radius: 999px;
   border: none;
