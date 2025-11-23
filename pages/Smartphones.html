@@ -7,66 +7,69 @@
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <!--NAVBAR COMO INDEX-->
+  <!--NAVBAR-->
   <header class="navbar">
-    <div class="navbar-posicion">
-      <!--LOGO DE LA TIENDA-->
-      <a href="/index.html"><img src="../img/logo.png" alt="Logo TecnoStore" width="40" height="40"></a>
-      <h1 class="navbar-title">TecnoStore</h1>
-    </div>
+    <!--LOGO DE LA TIENDA-->
+    <a href="/index.html" class="navbar-logo">
+      <img src="../img/logo.png" alt="TecnoStore"></a>
     <!--LINKS DE NAVEGACION-->
-    <div>
+    <nav>
       <ul class="navbar-links">
         <li><a href="/index.html">Home</a></li>
         <li><a href="/pages/Laptops.html">Laptops</a></li>
         <li><a href="/pages/Smartphones.html">Smartphones</a></li>
         <li><a href="/pages/Accesorios.html">Accesorios</a></li>
       </ul>
-    </div>
+    </nav>
     <!--BOTONES-->
-      <button type="button" class="btn-link"><a href="/pages/Login.html">Ingresar</a></button>
-      <button type="button" class="btn-link"><a href="/pages/Register.html">Registrarse</a></button>
-      <button type="button" class="btn-link">Logout</button>
+    <div class="navbar-btn">
+      <a href="/pages/Login.html" class="btn-link">Ingresar</a>
+      <a href="/pages/Register.html" class="btn-link">Registrarse</a>
+    </div>
   </header>
-   <!--CONTENIDO PRINCIPAL TITULO DE LA CATEGORIAS-->
-   <Main>
+  <!--CONTENIDO PRINCIPAL TITULO DE LA CATEGORIAS-->
+  <main>
     <section class="principal">
       <h1>Smartphones</h1>
       <p>Sección de smartphones de TecnoStore.</p>
     </section>
-    <section class="card-contenedor">
-      <div class="card-seccion">
-        <ol class="card-cuadricula">
-          <li class="contenedor-producto">
-            <a class="card-selector">
-              <div class="contenedor-imagen">
-                <div class="contenedor-info">
-                <span class="card-etiqueta">Smartphone</span>
-                <h4 class="card-titulo">Smartphone X200</h4>
-                <p class="card-descripcion">Pantalla AMOLED, cámara de 108MP, batería de larga duración.</p>
-                <p class="card-precio">$ 899.000</p>
-                <button type="button" class="btn-carrito">Agregar al carrito</button>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="card-contenedor">
-            <span class="card-etiqueta">Smartphone</span>
-            <h4 class="card-titulo">Smartphone Y100</h4>
-            <p class="card-descripcion">Rendimiento potente, diseño elegante, carga rápida.</p>
-            <p class="card-precio">$ 749.000</p>
-            <button type="button" class="btn-carrito">Agregar al carrito</button>
-          </li>
-          <li class="card-contenedor">
-            <span class="card-etiqueta">Smartphone</span>
-            <h4 class="card-titulo">Smartphone Z50</h4>
-            <p class="card-descripcion">Cámara cuádruple, pantalla grande, sistema operativo actualizado.</p>
-            <p class="card-precio">$ 599.000</p>
-            <button type="button" class="btn-carrito">Agregar al carrito</button>
-          </li>
-        </ol>
+    <section class="contenedor-producto">
+      <div class="contenedor-cuadricula">
+        <a  href="#" class="contenedor-selector">
+          <div class="contenedor-imagen">
+            <div class="contenedor-info">
+              <span class="card-etiqueta">Smartphone</span>
+              <h4 class="card-titulo">Smartphone X200</h4>
+              <p class="card-descripcion">Pantalla AMOLED, cámara de 108MP, batería de larga duración.</p>
+              <p class="card-precio">$ 899.000</p>
+              <button type="button" class="btn-carrito">Agregar al carrito</button>
+            </div>
+          </div>
+        </a>
+        <a  href="#" class="contenedor-selector">
+          <div class="contenedor-imagen">
+            <div class="contenedor-info">
+              <span class="card-etiqueta">Smartphone</span>
+              <h4 class="card-titulo">Smartphone Y100</h4>
+              <p class="card-descripcion">Rendimiento potente, diseño elegante, carga rápida.</p>
+              <p class="card-precio">$ 749.000</p>
+              <button type="button" class="btn-carrito">Agregar al carrito</button>
+            </div>
+          </div>
+        </a>
+        <a  href="#" class="contenedor-selector">
+          <div class="contenedor-imagen">
+            <div class="contenedor-info">
+              <span class="card-etiqueta">Smartphone</span>
+              <h4 class="card-titulo">Smartphone Z50</h4>
+              <p class="card-descripcion">Cámara cuádruple, pantalla grande, sistema operativo actualizado.</p>
+              <p class="card-precio">$ 599.000</p>
+              <button type="button" class="btn-carrito">Agregar al carrito</button>
+            </div>
+          </div>
+        </a>
       </div>
-    </section>  
-</Main>
+    </section>    
+  </main>
 </body>
 </html>
