@@ -24,9 +24,9 @@
       </ul>
     </div>
     <!--BOTONES-->
-      <button type="button" class="btn-disenio"><a href="/pages/Login.html">Ingresar</a></button>
-      <button type="button" class="btn-disenio"><a href="/pages/Register.html">Registrarse</a></button>
-      <button type="button" class="btn-disenio">Logout</button>
+      <button type="button" class="btn-link"><a href="/pages/Login.html">Ingresar</a></button>
+      <button type="button" class="btn-link"><a href="/pages/Register.html">Registrarse</a></button>
+      <button type="button" class="btn-link">Logout</button>
   </header>
    <!--CONTENIDO PRINCIPAL TITULO DE LA CATEGORIAS-->
    <Main>
@@ -36,30 +36,35 @@
     </section>
     <section class="card-contenedor">
       <div class="card-seccion">
-        <h3>Productos Destacados</h3>
-        <div class="card-cuadricula">
-          <article class="card-contenedor">
-            <span class="card-etiqueta">Smartphone</span>
-            <h4 class="card-titulo">Smartphone X200</h4>
-            <p class="card-descripcion">Pantalla AMOLED, cámara de 108MP, batería de larga duración.</p>
-            <p class="card-precio">$ 899.000</p>
-            <button type="button" class="btn-primario">Ver más</button>
-          </article>
-          <article class="card-contenedor">
+        <ol class="card-cuadricula">
+          <li class="contenedor-producto">
+            <a class="card-selector">
+              <div class="contenedor-imagen">
+                <div class="contenedor-info">
+                <span class="card-etiqueta">Smartphone</span>
+                <h4 class="card-titulo">Smartphone X200</h4>
+                <p class="card-descripcion">Pantalla AMOLED, cámara de 108MP, batería de larga duración.</p>
+                <p class="card-precio">$ 899.000</p>
+                <button type="button" class="btn-carrito">Agregar al carrito</button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card-contenedor">
             <span class="card-etiqueta">Smartphone</span>
             <h4 class="card-titulo">Smartphone Y100</h4>
             <p class="card-descripcion">Rendimiento potente, diseño elegante, carga rápida.</p>
             <p class="card-precio">$ 749.000</p>
-            <button type="button" class="btn-primario">Ver más</button>
-          </article>
-          <article class="card-contenedor">
+            <button type="button" class="btn-carrito">Agregar al carrito</button>
+          </li>
+          <li class="card-contenedor">
             <span class="card-etiqueta">Smartphone</span>
             <h4 class="card-titulo">Smartphone Z50</h4>
             <p class="card-descripcion">Cámara cuádruple, pantalla grande, sistema operativo actualizado.</p>
             <p class="card-precio">$ 599.000</p>
-            <button type="button" class="btn-primario">Ver más</button>
-          </article>
-        </div>
+            <button type="button" class="btn-carrito">Agregar al carrito</button>
+          </li>
+        </ol>
       </div>
     </section>  
 </Main>
