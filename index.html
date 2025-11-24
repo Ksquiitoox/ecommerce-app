@@ -13,14 +13,14 @@
     <a href="/index.html" class="navbar-logo">
       <img src="img/logo.png" alt="TecnoStore"></a>
     <!--LINKS DE NAVEGACION-->
-    <nav>
+    <div>
       <ul class="navbar-links">
         <li><a href="/index.html">Home</a></li>
         <li><a href="/pages/Laptops.html">Laptops</a></li>
         <li><a href="/pages/Smartphones.html">Smartphones</a></li>
         <li><a href="/pages/Accesorios.html">Accesorios</a></li>
       </ul>
-    </nav>
+    </div>
     <!--BOTONES-->
     <div class="navbar-btn">
       <a href="/pages/Login.html" class="btn-link">Ingresar</a>
@@ -28,51 +28,35 @@
     </div>
   </header>
   <!--CONTENIDO PRINCIPAL-->
-  <main>
-    <!--titulo en body-->
-    <section class="principal"> 
-      <h1>TecnoStore</h1>
-      <p>Bienvenido a TecnoStore, tu tienda de tecnología online.</p>
-    </section>
-    <!--Seccion de Cards-->
-    <section class="contenedor-producto">
-      <h3>Producto destacado</h3>
-      <div class="contenedor-cuadricula"> 
-        <a href="#" class="contenedor-selector">
-          <div class="contenedor-imagen">
-            <div class="contenedor-info">
-              <span class="card-etiqueta">Laptop</span>
-              <h4 class="card-titulo">Laptop Gamer RTX</h4>
-              <p class="card-descripcion">Rendimiento ideal para estudio, trabajo y juegos.</p>
-              <p class="card-precio">$ 1.200.000</p>
-              <button type="button" class = "btn-primario">Agregar al carrito</button>
-            </div>
-          </div>
-        </a>
-        <a href="/pages/Smartphones.html" class="contenedor-selector">
-          <div class="contenedor-imagen">
-            <div class="contenedor-info">
-              <span class="card-etiqueta">Smartphone</span>
-              <h4 class="card-titulo">Smartphone X200</h4>
-              <p class="card-descripcion">Pantalla AMOLED, cámara de 108MP y batería de larga duración.</p>
-              <p class="card-precio">$ 899.000</p>
-              <button type="button" class="btn-primario">Agregar al carrito</button>
-            </div>
-          </div>
-        </a>
-        <a href="/pages/Accesorios.html" class="contenedor-selector">
-          <div class="contenedor-imagen">
-            <div class="contenedor-info">
-              <span class="card-etiqueta">Accesorio</span>
-              <h4 class="card-titulo">Audífonos Inalámbricos XYZ</h4>
-              <p class="card-descripcion">Sonido envolvente, cancelación de ruido y estuche de carga rápida.</p>
-              <p class="card-precio">$ 250.000</p>
-              <button type="button" class="btn-primario">Agregar al carrito</button>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
+  <!--titulo en body-->
+  <nav class="principal">
+    <a class="navbar-title"><img src="img/title-img.png" alt="titleStore"></a>
+    <p>Bienvenido a TecnoStore, tu tienda de tecnología online.</p>
+  </nav>
+  <!--Seccion de Cards-->
+  <h2>Productos destacados</h2>
+  <main class="contenedor-producto">
+    <article href="/pages/Laptops.html" class="contenedor-cuadricula">
+      <figure class="contenedor-imagen">
+      </figure>
+        <p class="card-descripcion">Rendimiento ideal para estudio, trabajo y juegos.</p>
+        <p class="card-precio">$ 1.200.000</p>
+        <a href="#" type="button" class="btn-carrito">Agregar al carrito</a>
+    </article>
+    <article href="/pages/Smartphones.html" class="contenedor-cuadricula">
+      <figure class="contenedor-imagen">
+      </figure>
+        <p class="card-descripcion">Pantalla AMOLED, cámara de 108MP y batería de larga duración.</p>
+        <p class="card-precio">$ 899.000</p>
+        <a href="#" type="button" class="btn-carrito">Agregar al carrito</a>
+    </article>
+    <article href="/pages/Accesorios.html" class="contenedor-cuadricula">
+      <figure class="contenedor-imagen">
+      </figure>
+        <p class="card-descripcion">Sonido envolvente, cancelación de ruido y carga rápida.</p>
+        <p class="card-precio">$ 250.000</p>
+        <a href="#" type="button" class="btn-carrito">Agregar al carrito</a>
+    </article>
   </main>
 </body>
 </html>

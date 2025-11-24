@@ -14,7 +14,6 @@
   box-sizing: border-box;
 }
 body {
-  position: static;
   margin: 0;
   font-size: 1rem;
   font-weight: normal;
@@ -22,14 +21,9 @@ body {
   background-color: var(--color-bg-page);
   color: var(--color-text-main);
 }
-::-ms-clear { display: none; }
-
-input[type="text"]:focus,
-textarea:focus { outline: none; }
-
-address { font-style: normal; }
 main {
-  max-width: 1100px;
+  width: 90%;
+  height: 90%;
   margin: 30px auto;
   padding: 0 16px 40px 16px;
 }
@@ -72,115 +66,59 @@ h1, h2, h3 {
   display: flex;
   gap: 10px;
 }
+.navbar-title{
+  display: flex;
+  justify-content:center;
+  text-align: center;
+  max-height: 10%;
+  max-height: 40vh;
+}
 /*HOME / LAYOUT CARDS*/
 .principal {
   text-align: center;
   background-color: var(--color-border-soft);
   border-radius: 12px;
-  padding: 20px;
 }
 .principal p {
   color: var(--color-text-muted);
 }
 /*Layout general para las cards*/
 .contenedor-producto {
-  -webkit-text-size-adjust: 100%;
-  color: #333;
-  font-family: 'Roboto',sans-serif,'Helvetica Neue',Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.4rem;
-  list-style: none none;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 2px 5px 5px;
-  border: 2px solid transparent;
+  /* Grid de las cards */
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
 }
-.contenedor-cuadricula {
-  -webkit-text-size-adjust: 100%;
-  color: #333;
-  font-family: 'Roboto',sans-serif,'Helvetica Neue',Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.4rem;
-  box-sizing: border-box;
-  padding: 0;
-  list-style: none none;
-  margin: 0 -2px;
-  display: grid;
-  position: relative;
-  grid-template-columns: repeat(3,33.33333333%);
-}
-.contenedor-selector {
-    -webkit-text-size-adjust: 100%;
-    font-family: 'Roboto',sans-serif,'Helvetica Neue',Helvetica,Arial,sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.4;
-    font-size: 1.4rem;
-    list-style: none none;
-    box-sizing: border-box;
-    text-decoration: none;
-    padding: 15px;
-    box-shadow: 2px 2px 10px 0px rgba(0,0,0,.25);
-    border-radius: 10px;
-    color: inherit;
-    max-width: 100%;
-    position: relative;
-    background: #fff;
-    height: 100%;   
-    display: flex;
-}
+  .contenedor-cuadricula{
+  width: 22%;
+  min-height: 85vh;
+  background-color: var(--color-border-soft);
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0);
+  text-align: center;
+  }
+  .contenedor-cuadricula:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0);
+  }
 .contenedor-imagen {
-    -webkit-text-size-adjust: 100%;
-    font-family: 'Roboto',sans-serif,'Helvetica Neue',Helvetica,Arial,sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.4;
-    font-size: 1.4rem;
-    list-style: none none;
-    color: inherit;
-    text-align: center;
-    box-sizing: border-box;
-    display: block;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-}
-.contenedor-info {
-    -webkit-text-size-adjust: 100%;
-    font-family: 'Roboto',sans-serif,'Helvetica Neue',Helvetica,Arial,sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.4;
-    font-size: 1.4rem;
-    list-style: none none;
-    color: inherit;
-    box-sizing: border-box;
-    flex-grow: 2;
-}
-.card-etiqueta {
-  display: inline-block;
-  font-size: 0.75rem;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background-color: var(--color-primary-soft);
-  color: var(--color-primary);
-}
-.card-titulo {
-  font-size: 1rem;
-  margin: 0;
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 .card-descripcion {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  margin: 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  margin: 20px;
 }
 .card-precio {
+  text-align: center;
   font-weight: bold;
   font-size: 1.1rem;
+  color: #38bdf8;
+  margin-bottom: 10px auto;
 }
   /*LOGIN / REGISTRO*/
 .auth-main {
@@ -276,4 +214,5 @@ h1, h2, h3 {
   background-color: #fff  ;
   color: #141414;
   opacity: 0.9;
+  transition: background-color 0.3s ease;
 }
