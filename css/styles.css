@@ -66,21 +66,24 @@ h1, h2, h3 {
   display: flex;
   gap: 10px;
 }
-.navbar-title{
-  display: flex;
-  justify-content:center;
-  text-align: center;
-  max-height: 10%;
-  max-height: 40vh;
-}
 /*HOME / LAYOUT CARDS*/
-.principal {
+.banner {
+  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
   text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
   background-color: var(--color-border-soft);
   border-radius: 12px;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease-out forwards;
 }
-.principal p {
-  color: var(--color-text-muted);
+h2{
+  text-align: center;
+  padding: 30px;
 }
 /*Layout general para las cards*/
 .contenedor-producto {
